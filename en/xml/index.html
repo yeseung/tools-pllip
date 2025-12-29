@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y4NESGBMLL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y4NESGBMLL");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>XML Formatter - MyTools</title>
+    <meta
+      name="description"
+      content="Free XML formatter. Format, validate, minify XML and convert to JSON."
+    />
+    <meta
+      name="keywords"
+      content="XML formatter, XML beautify, XML validate, XML to JSON"
+    />
+
+    <!-- Open Graph / SNS 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="XML Formatter" />
+    <meta
+      property="og:description"
+      content="Free XML formatter. Format, validate, minify XML and convert to JSON."
+    />
+    <meta property="og:url" content="https://tools.pllip.com/en/xml/" />
+    <meta property="og:site_name" content="MyTools" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="XML Formatter" />
+    <meta
+      name="twitter:description"
+      content="Free XML formatter. Format, validate, minify XML and convert to JSON."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tools.pllip.com/en/xml/" />
+
+    <!-- Alternate language links -->
+
+    <link rel="alternate" hreflang="ko" href="https://tools.pllip.com/xml/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://tools.pllip.com/en/xml/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tools.pllip.com/xml/"
+    />
+
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tools.pllip.com",
+        "alternateName": "Online Tools",
+        "url": "https://tools.pllip.com/en/",
+        "description": "Free online tools collection. IP address lookup, QR code generator, JSON/XML formatter, Markdown viewer, Base64 converter, and regex tester.",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tools.pllip.com/en/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "XML Formatter",
+        "description": "Format, validate XML with JSON conversion",
+        "url": "https://tools.pllip.com/en/xml/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tools.pllip.com",
+          "url": "https://tools.pllip.com"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css?v=80f21ced" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/en/" class="logo"
+          ><span class="logo-full">tools.pllip.com</span
+          ><span class="logo-short">tools</span></a
+        >
+        <div class="nav-wrapper">
+          <button class="nav-arrow nav-prev" aria-label="Previous">
+            &#8249;
+          </button>
+          <ul id="nav-menu">
+            <li><a href="/en/ip/">IP Check</a></li>
+
+            <li><a href="/en/qr/">QR Code</a></li>
+
+            <li><a href="/en/json/">JSON</a></li>
+
+            <li><a href="/en/xml/" class="active">XML</a></li>
+
+            <li><a href="/en/md/">Markdown</a></li>
+
+            <li><a href="/en/base64/">Base64</a></li>
+
+            <li><a href="/en/regex/">Regex</a></li>
+
+            <li><a href="/en/uuid/">UUID</a></li>
+
+            <li><a href="/en/hash/">Hash</a></li>
+
+            <li><a href="/en/ladder/">Ladder</a></li>
+
+            <li><a href="/en/kelly/">Kelly</a></li>
+
+            <li><a href="/en/sudoku/">Sudoku</a></li>
+
+            <li><a href="/en/loan/">Loan</a></li>
+          </ul>
+          <button class="nav-arrow nav-next" aria-label="Next">&#8250;</button>
+        </div>
+        <div class="nav-search">
+          <button class="search-btn" id="search-btn" aria-label="Search">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Search tools..."
+              autocomplete="off"
+            />
+            <ul id="search-results">
+              <li>
+                <a
+                  href="/en/ip/"
+                  data-keywords="ip address ipv4 ipv6 myip whatismyip location lookup IP Address Lookup IP Check"
+                  >🌐 IP Address Lookup</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/qr/"
+                  data-keywords="qr code barcode wifi vcard generator create QR Code Generator QR Code"
+                  >📱 QR Code Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/json/"
+                  data-keywords="json formatter beautify minify validate parser JSON Formatter JSON"
+                  >{ } JSON Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/xml/"
+                  data-keywords="xml formatter beautify html xhtml convert json XML Formatter XML"
+                  >&lt;/&gt; XML Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/md/"
+                  data-keywords="markdown md preview editor github readme Markdown Viewer Markdown"
+                  >M↓ Markdown Viewer</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/base64/"
+                  data-keywords="base64 encode decode encoder decoder converter Base64 Converter Base64"
+                  >B64 Base64 Converter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/regex/"
+                  data-keywords="regex regexp regular expression pattern tester Regex Tester Regex"
+                  >.* Regex Tester</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/uuid/"
+                  data-keywords="uuid guid unique id generator random UUID Generator UUID"
+                  ># UUID Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/hash/"
+                  data-keywords="hash md5 sha1 sha256 sha512 checksum generator Hash Generator Hash"
+                  >## Hash Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/ladder/"
+                  data-keywords="ladder game random picker lottery selection Ladder Game Ladder"
+                  >🪜 Ladder Game</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/kelly/"
+                  data-keywords="kelly criterion betting investment ratio bankroll odds Kelly Criterion Calculator Kelly"
+                  >📊 Kelly Criterion Calculator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/sudoku/"
+                  data-keywords="sudoku puzzle number game brain logic solver hints Sudoku Sudoku"
+                  >9 Sudoku</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/loan/"
+                  data-keywords="loan calculator repayment mortgage amortization interest rate debt payoff strategy Loan Repayment Calculator Loan"
+                  >💰 Loan Repayment Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <style>
+        .formatter-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+          .formatter-container {
+            grid-template-columns: 1fr;
+          }
+        }
+        .editor-box {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+        .editor-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          background: var(--bg);
+          border-bottom: 1px solid var(--border);
+        }
+        .editor-header h3 {
+          font-size: 0.875rem;
+          font-weight: 600;
+        }
+        .editor-actions {
+          display: flex;
+          gap: 0.5rem;
+        }
+        .editor-actions button {
+          padding: 0.35rem 0.75rem;
+          font-size: 0.75rem;
+          border: 1px solid var(--border);
+          background: var(--card-bg);
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        .editor-actions button:hover {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+        .editor-textarea {
+          width: 100%;
+          min-height: 400px;
+          padding: 1rem;
+          border: none;
+          resize: vertical;
+          font-family: "SF Mono", Monaco, monospace;
+          font-size: 0.875rem;
+          line-height: 1.5;
+          background: var(--card-bg);
+        }
+        .editor-textarea:focus {
+          outline: none;
+        }
+        .status-bar {
+          padding: 0.5rem 1rem;
+          background: var(--bg);
+          border-top: 1px solid var(--border);
+          font-size: 0.75rem;
+          display: flex;
+          justify-content: space-between;
+        }
+        .status-valid {
+          color: var(--success);
+        }
+        .status-invalid {
+          color: var(--error);
+        }
+        .toolbar {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          margin-bottom: 1rem;
+        }
+        .toolbar button {
+          padding: 0.5rem 1rem;
+          border: 1px solid var(--border);
+          background: var(--card-bg);
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.875rem;
+        }
+        .toolbar button:hover {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+        .indent-select {
+          padding: 0.5rem;
+          border: 1px solid var(--border);
+          border-radius: 6px;
+          font-size: 0.875rem;
+        }
+      </style>
+
+      <div class="toolbar">
+        <button onclick="formatXML()">Beautify</button>
+        <button onclick="minifyXML()">Minify</button>
+        <button onclick="validateXML()">Validate</button>
+        <button onclick="xmlToJson()">To JSON</button>
+        <button onclick="copyOutput()">Copy</button>
+        <button onclick="clearAll()">Clear</button>
+        <select class="indent-select" id="indent-size">
+          <option value="2">2 spaces</option>
+          <option value="4">4 spaces</option>
+        </select>
+      </div>
+
+      <div class="ad-container">Ad Area</div>
+
+      <div class="formatter-container">
+        <div class="editor-box">
+          <div class="editor-header">
+            <h3>Input</h3>
+            <div class="editor-actions">
+              <button onclick="loadSample()">Sample</button>
+              <button onclick="document.getElementById('input').value=''">
+                Clear
+              </button>
+            </div>
+          </div>
+          <textarea
+            id="input"
+            class="editor-textarea"
+            placeholder="<root><item>content</item></root>"
+            spellcheck="false"
+          ></textarea>
+          <div class="status-bar">
+            <span id="input-status">Waiting for input...</span>
+            <span id="input-size">0 bytes</span>
+          </div>
+        </div>
+
+        <div class="editor-box">
+          <div class="editor-header">
+            <h3>Output</h3>
+            <div class="editor-actions">
+              <button onclick="copyOutput()">Copy</button>
+              <button onclick="downloadOutput()">Download</button>
+            </div>
+          </div>
+          <textarea
+            id="output"
+            class="editor-textarea"
+            placeholder=""
+            readonly
+            spellcheck="false"
+          ></textarea>
+          <div class="status-bar">
+            <span id="output-status">-</span>
+            <span id="output-size">0 bytes</span>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const T = {
+          waiting: "Waiting for input...",
+          validXml: "Valid XML",
+          invalidXml: "Invalid XML",
+          validXmlMsg: "Valid XML",
+          formatDone: "Formatted",
+          minifyDone: "Minified",
+          jsonDone: "Converted to JSON",
+          validatePass: "Validation passed",
+          validateFail: "Validation failed",
+          copied: "Copied to clipboard!",
+          error: "Error",
+        };
+
+        const inputEl = document.getElementById("input");
+        const outputEl = document.getElementById("output");
+
+        inputEl.addEventListener("input", () => {
+          updateInputSize();
+          autoValidate();
+        });
+
+        function getIndent() {
+          return parseInt(document.getElementById("indent-size").value);
+        }
+
+        function parseXML(xmlString) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(xmlString, "application/xml");
+          const parseError = doc.querySelector("parsererror");
+          if (parseError)
+            throw new Error(parseError.textContent.split("\n")[0]);
+          return doc;
+        }
+
+        function formatXML() {
+          try {
+            outputEl.value = beautifyXML(inputEl.value, getIndent());
+            updateStatus("output-status", T.formatDone, true);
+            updateOutputSize();
+          } catch (e) {
+            outputEl.value = "";
+            updateStatus("output-status", `${T.error}: ${e.message}`, false);
+          }
+        }
+
+        function beautifyXML(xml, indentSize) {
+          parseXML(xml);
+          const indent = " ".repeat(indentSize);
+          let formatted = "",
+            depth = 0;
+          xml = xml.replace(/>\s*</g, "><");
+          const tokens = xml.match(/<[^>]+>|[^<]+/g) || [];
+          tokens.forEach((token) => {
+            if (token.match(/^<\?/)) {
+              formatted += token + "\n";
+            } else if (token.match(/^<\//)) {
+              depth--;
+              formatted += indent.repeat(depth) + token + "\n";
+            } else if (token.match(/^<[^/].*\/>/)) {
+              formatted += indent.repeat(depth) + token + "\n";
+            } else if (token.match(/^</)) {
+              formatted += indent.repeat(depth) + token + "\n";
+              depth++;
+            } else if (token.trim()) {
+              formatted = formatted.trimEnd() + token;
+              if (!tokens[tokens.indexOf(token) + 1]?.match(/^<\//))
+                formatted += "\n";
+            }
+          });
+          return formatted.trim();
+        }
+
+        function minifyXML() {
+          try {
+            parseXML(inputEl.value);
+            outputEl.value = inputEl.value
+              .replace(/>\s+</g, "><")
+              .replace(/\s+/g, " ")
+              .replace(/>\s+/g, ">")
+              .replace(/\s+</g, "<")
+              .trim();
+            updateStatus("output-status", T.minifyDone, true);
+            updateOutputSize();
+          } catch (e) {
+            outputEl.value = "";
+            updateStatus("output-status", `${T.error}: ${e.message}`, false);
+          }
+        }
+
+        function validateXML() {
+          try {
+            parseXML(inputEl.value);
+            updateStatus("input-status", T.validXmlMsg, true);
+            updateStatus("output-status", T.validatePass, true);
+          } catch (e) {
+            updateStatus("input-status", `${T.error}: ${e.message}`, false);
+            updateStatus("output-status", T.validateFail, false);
+          }
+        }
+
+        function autoValidate() {
+          if (!inputEl.value.trim()) {
+            updateStatus("input-status", T.waiting, null);
+            return;
+          }
+          try {
+            parseXML(inputEl.value);
+            updateStatus("input-status", T.validXml, true);
+          } catch (e) {
+            updateStatus("input-status", T.invalidXml, false);
+          }
+        }
+
+        function xmlToJson() {
+          try {
+            const doc = parseXML(inputEl.value);
+            outputEl.value = JSON.stringify(
+              xmlNodeToJson(doc.documentElement),
+              null,
+              getIndent()
+            );
+            updateStatus("output-status", T.jsonDone, true);
+            updateOutputSize();
+          } catch (e) {
+            outputEl.value = "";
+            updateStatus("output-status", `${T.error}: ${e.message}`, false);
+          }
+        }
+
+        function xmlNodeToJson(node) {
+          const obj = {};
+          if (node.attributes && node.attributes.length > 0) {
+            obj["@attributes"] = {};
+            for (let attr of node.attributes)
+              obj["@attributes"][attr.name] = attr.value;
+          }
+          for (let child of node.childNodes) {
+            if (child.nodeType === Node.TEXT_NODE) {
+              const text = child.textContent.trim();
+              if (text) {
+                if (node.childNodes.length === 1) return text;
+                obj["#text"] = text;
+              }
+            } else if (child.nodeType === Node.ELEMENT_NODE) {
+              const childJson = xmlNodeToJson(child);
+              if (obj[child.nodeName]) {
+                if (!Array.isArray(obj[child.nodeName]))
+                  obj[child.nodeName] = [obj[child.nodeName]];
+                obj[child.nodeName].push(childJson);
+              } else {
+                obj[child.nodeName] = childJson;
+              }
+            }
+          }
+          return Object.keys(obj).length === 0 ? "" : obj;
+        }
+
+        function updateStatus(id, message, isValid) {
+          const el = document.getElementById(id);
+          el.textContent = message;
+          el.className =
+            isValid === true
+              ? "status-valid"
+              : isValid === false
+              ? "status-invalid"
+              : "";
+        }
+
+        function updateInputSize() {
+          document.getElementById("input-size").textContent = formatBytes(
+            new Blob([inputEl.value]).size
+          );
+        }
+        function updateOutputSize() {
+          document.getElementById("output-size").textContent = formatBytes(
+            new Blob([outputEl.value]).size
+          );
+        }
+        function formatBytes(bytes) {
+          if (bytes === 0) return "0 bytes";
+          if (bytes < 1024) return bytes + " bytes";
+          return (bytes / 1024).toFixed(2) + " KB";
+        }
+
+        function copyOutput() {
+          navigator.clipboard.writeText(outputEl.value).then(() => {
+            updateStatus("output-status", T.copied, true);
+            setTimeout(() => updateStatus("output-status", "-", null), 2000);
+          });
+        }
+
+        function downloadOutput() {
+          const isJson = outputEl.value.trim().startsWith("{");
+          const blob = new Blob([outputEl.value], {
+            type: isJson ? "application/json" : "application/xml",
+          });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = `formatted.${isJson ? "json" : "xml"}`;
+          a.click();
+        }
+
+        function clearAll() {
+          inputEl.value = "";
+          outputEl.value = "";
+          updateStatus("input-status", T.waiting, null);
+          updateStatus("output-status", "-", null);
+          updateInputSize();
+          updateOutputSize();
+        }
+
+        function loadSample() {
+          inputEl.value = `<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user id="1">
+    <name>John Doe</name>
+    <email>john@example.com</email>
+  </user>
+</users>`;
+          updateInputSize();
+          autoValidate();
+        }
+      </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 tools.pllip.com</p>
+        <div class="lang-switcher">
+          <a href="/xml/" class="lang-btn">한국어</a>
+          <a href="/en/xml/" class="lang-btn active">English</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Nav scroll arrows
+        const menu = document.getElementById("nav-menu");
+        const prevBtn = document.querySelector(".nav-prev");
+        const nextBtn = document.querySelector(".nav-next");
+
+        function updateArrows() {
+          const needsScroll = menu.scrollWidth > menu.clientWidth;
+          const atStart = menu.scrollLeft <= 0;
+          const atEnd =
+            menu.scrollLeft >= menu.scrollWidth - menu.clientWidth - 1;
+
+          if (needsScroll) {
+            prevBtn.classList.add("visible");
+            nextBtn.classList.add("visible");
+            prevBtn.classList.toggle("hidden", atStart);
+            nextBtn.classList.toggle("hidden", atEnd);
+          } else {
+            prevBtn.classList.remove("visible");
+            nextBtn.classList.remove("visible");
+          }
+        }
+
+        prevBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: -150, behavior: "smooth" })
+        );
+        nextBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: 150, behavior: "smooth" })
+        );
+        menu.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+
+        // Scroll to active menu item on load
+        const activeItem = menu.querySelector("a.active");
+        if (activeItem) {
+          const li = activeItem.parentElement;
+          const menuRect = menu.getBoundingClientRect();
+          const liRect = li.getBoundingClientRect();
+          const scrollLeft =
+            li.offsetLeft - menuRect.width / 2 + liRect.width / 2;
+          menu.scrollLeft = Math.max(0, scrollLeft);
+        }
+        updateArrows();
+
+        // Header search dropdown
+        const searchBtn = document.getElementById("search-btn");
+        const dropdown = document.getElementById("search-dropdown");
+        const searchInput = document.getElementById("header-search");
+        const results = document.getElementById("search-results");
+        const items = results.querySelectorAll("li");
+
+        searchBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("open");
+          if (dropdown.classList.contains("open")) {
+            searchInput.focus();
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target) && e.target !== searchBtn) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        searchInput.addEventListener("input", () => {
+          const q = searchInput.value.toLowerCase().trim();
+          let visible = 0;
+          items.forEach((li) => {
+            const a = li.querySelector("a");
+            const text = a.textContent.toLowerCase();
+            const keywords = (a.dataset.keywords || "").toLowerCase();
+            const match = !q || text.includes(q) || keywords.includes(q);
+            li.classList.toggle("hidden", !match);
+            if (match) visible++;
+          });
+        });
+
+        // Keyboard shortcut: Cmd/Ctrl + K
+        document.addEventListener("keydown", (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+            e.preventDefault();
+            dropdown.classList.add("open");
+            searchInput.focus();
+          }
+          if (e.key === "Escape") {
+            dropdown.classList.remove("open");
+          }
+        });
+      })();
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"a47e96a534854c899db066813b9421c4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

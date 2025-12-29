@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y4NESGBMLL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y4NESGBMLL");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Loan Repayment Calculator - MyTools</title>
+    <meta
+      name="description"
+      content="Calculate monthly payments for multiple loans and get recommendations on the best payoff order."
+    />
+    <meta
+      name="keywords"
+      content="loan calculator, repayment calculator, amortization, mortgage, debt payoff, avalanche, snowball"
+    />
+
+    <!-- Open Graph / SNS 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Loan Repayment Calculator" />
+    <meta
+      property="og:description"
+      content="Calculate monthly payments for multiple loans and get recommendations on the best payoff order."
+    />
+    <meta property="og:url" content="https://tools.pllip.com/en/loan/" />
+    <meta property="og:site_name" content="MyTools" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Loan Repayment Calculator" />
+    <meta
+      name="twitter:description"
+      content="Calculate monthly payments for multiple loans and get recommendations on the best payoff order."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tools.pllip.com/en/loan/" />
+
+    <!-- Alternate language links -->
+
+    <link rel="alternate" hreflang="ko" href="https://tools.pllip.com/loan/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://tools.pllip.com/en/loan/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tools.pllip.com/loan/"
+    />
+
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tools.pllip.com",
+        "alternateName": "Online Tools",
+        "url": "https://tools.pllip.com/en/",
+        "description": "Free online tools collection. IP address lookup, QR code generator, JSON/XML formatter, Markdown viewer, Base64 converter, and regex tester.",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tools.pllip.com/en/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Loan Repayment Calculator",
+        "description": "Manage multiple loans and find the optimal repayment strategy",
+        "url": "https://tools.pllip.com/en/loan/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tools.pllip.com",
+          "url": "https://tools.pllip.com"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css?v=80f21ced" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/en/" class="logo"
+          ><span class="logo-full">tools.pllip.com</span
+          ><span class="logo-short">tools</span></a
+        >
+        <div class="nav-wrapper">
+          <button class="nav-arrow nav-prev" aria-label="Previous">
+            &#8249;
+          </button>
+          <ul id="nav-menu">
+            <li><a href="/en/ip/">IP Check</a></li>
+
+            <li><a href="/en/qr/">QR Code</a></li>
+
+            <li><a href="/en/json/">JSON</a></li>
+
+            <li><a href="/en/xml/">XML</a></li>
+
+            <li><a href="/en/md/">Markdown</a></li>
+
+            <li><a href="/en/base64/">Base64</a></li>
+
+            <li><a href="/en/regex/">Regex</a></li>
+
+            <li><a href="/en/uuid/">UUID</a></li>
+
+            <li><a href="/en/hash/">Hash</a></li>
+
+            <li><a href="/en/ladder/">Ladder</a></li>
+
+            <li><a href="/en/kelly/">Kelly</a></li>
+
+            <li><a href="/en/sudoku/">Sudoku</a></li>
+
+            <li><a href="/en/loan/" class="active">Loan</a></li>
+          </ul>
+          <button class="nav-arrow nav-next" aria-label="Next">&#8250;</button>
+        </div>
+        <div class="nav-search">
+          <button class="search-btn" id="search-btn" aria-label="Search">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Search tools..."
+              autocomplete="off"
+            />
+            <ul id="search-results">
+              <li>
+                <a
+                  href="/en/ip/"
+                  data-keywords="ip address ipv4 ipv6 myip whatismyip location lookup IP Address Lookup IP Check"
+                  >🌐 IP Address Lookup</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/qr/"
+                  data-keywords="qr code barcode wifi vcard generator create QR Code Generator QR Code"
+                  >📱 QR Code Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/json/"
+                  data-keywords="json formatter beautify minify validate parser JSON Formatter JSON"
+                  >{ } JSON Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/xml/"
+                  data-keywords="xml formatter beautify html xhtml convert json XML Formatter XML"
+                  >&lt;/&gt; XML Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/md/"
+                  data-keywords="markdown md preview editor github readme Markdown Viewer Markdown"
+                  >M↓ Markdown Viewer</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/base64/"
+                  data-keywords="base64 encode decode encoder decoder converter Base64 Converter Base64"
+                  >B64 Base64 Converter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/regex/"
+                  data-keywords="regex regexp regular expression pattern tester Regex Tester Regex"
+                  >.* Regex Tester</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/uuid/"
+                  data-keywords="uuid guid unique id generator random UUID Generator UUID"
+                  ># UUID Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/hash/"
+                  data-keywords="hash md5 sha1 sha256 sha512 checksum generator Hash Generator Hash"
+                  >## Hash Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/ladder/"
+                  data-keywords="ladder game random picker lottery selection Ladder Game Ladder"
+                  >🪜 Ladder Game</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/kelly/"
+                  data-keywords="kelly criterion betting investment ratio bankroll odds Kelly Criterion Calculator Kelly"
+                  >📊 Kelly Criterion Calculator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/sudoku/"
+                  data-keywords="sudoku puzzle number game brain logic solver hints Sudoku Sudoku"
+                  >9 Sudoku</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/loan/"
+                  data-keywords="loan calculator repayment mortgage amortization interest rate debt payoff strategy Loan Repayment Calculator Loan"
+                  >💰 Loan Repayment Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="loan-container">
+        <div class="loan-info">
+          <p>
+            Enter your loans to see the monthly payment schedule and analyze
+            which loan to pay off first.
+          </p>
+        </div>
+
+        <div class="loans-section">
+          <div class="loans-header">
+            <h3>Loan</h3>
+            <button class="btn btn-secondary" onclick="addLoan()">
+              + Add Loan
+            </button>
+          </div>
+          <div id="loans-container"></div>
+        </div>
+
+        <div class="strategy-section">
+          <h3>Repayment Strategy Comparison</h3>
+          <div class="extra-payment-input">
+            <label for="extra-payment">Extra Monthly Payment</label>
+            <input
+              type="number"
+              id="extra-payment"
+              min="0"
+              step="10000"
+              value="0"
+              placeholder="0"
+            />
+            <span class="input-hint">Additional amount to pay each month</span>
+          </div>
+        </div>
+
+        <div class="loan-actions">
+          <button class="btn btn-primary" onclick="calculate()">
+            Calculate
+          </button>
+          <button class="btn btn-secondary" onclick="resetAll()">Reset</button>
+        </div>
+
+        <div class="loan-error" id="error-msg"></div>
+
+        <div class="loan-result" id="result" style="display: none">
+          <div class="result-summary">
+            <h3>Summary</h3>
+            <div class="summary-grid">
+              <div class="summary-item">
+                <span class="summary-label">Total Loan Balance</span>
+                <span class="summary-value" id="total-principal">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Total Monthly Payment</span>
+                <span class="summary-value" id="total-monthly">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Total Interest Expected</span>
+                <span class="summary-value" id="total-interest">-</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="loan-details" id="loan-details"></div>
+
+          <div class="strategy-comparison" id="strategy-comparison">
+            <h3>Repayment Strategy Comparison</h3>
+            <div class="strategy-grid">
+              <div class="strategy-card" id="avalanche-card">
+                <div class="strategy-header">
+                  <h4>Avalanche Method (High Interest First)</h4>
+                  <span
+                    class="recommendation-badge"
+                    id="avalanche-badge"
+                    style="display: none"
+                    >Recommended</span
+                  >
+                </div>
+                <p class="strategy-desc">
+                  Pay off loans with highest interest rate first. Saves the most
+                  money on interest.
+                </p>
+                <div class="strategy-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Interest Saved</span>
+                    <span class="stat-value" id="avalanche-saved">-</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Months Saved</span>
+                    <span class="stat-value" id="avalanche-months">-</span>
+                  </div>
+                </div>
+                <div class="payoff-order" id="avalanche-order"></div>
+              </div>
+              <div class="strategy-card" id="snowball-card">
+                <div class="strategy-header">
+                  <h4>Snowball Method (Smallest Balance First)</h4>
+                  <span
+                    class="recommendation-badge"
+                    id="snowball-badge"
+                    style="display: none"
+                    >Recommended</span
+                  >
+                </div>
+                <p class="strategy-desc">
+                  Pay off loans with smallest balance first. Provides quick wins
+                  for motivation.
+                </p>
+                <div class="strategy-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Interest Saved</span>
+                    <span class="stat-value" id="snowball-saved">-</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Months Saved</span>
+                    <span class="stat-value" id="snowball-months">-</span>
+                  </div>
+                </div>
+                <div class="payoff-order" id="snowball-order"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-section" id="schedule-section">
+            <div class="schedule-header">
+              <h3>Monthly Payment Schedule</h3>
+              <button
+                class="btn btn-secondary btn-sm"
+                onclick="downloadSchedule()"
+              >
+                Download Schedule
+              </button>
+            </div>
+            <div class="schedule-tabs" id="schedule-tabs"></div>
+            <div class="schedule-table-container">
+              <table class="schedule-table" id="schedule-table">
+                <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th>Payment</th>
+                    <th>Principal</th>
+                    <th>Interest</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody id="schedule-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .loan-container {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .loan-info {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+        .loan-info p {
+          color: var(--text-muted);
+          margin: 0;
+        }
+
+        .loans-section {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+        .loans-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+        }
+        .loans-header h3 {
+          margin: 0;
+        }
+
+        .loan-card {
+          background: var(--bg);
+          border: 1px solid var(--border);
+          border-radius: 8px;
+          padding: 1rem;
+          margin-bottom: 1rem;
+        }
+        .loan-card:last-child {
+          margin-bottom: 0;
+        }
+        .loan-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+        }
+        .loan-card-title {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .loan-number {
+          background: var(--primary);
+          color: white;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+        .loan-card-inputs {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 1rem;
+        }
+        .input-group {
+          display: flex;
+          flex-direction: column;
+        }
+        .input-group label {
+          font-size: 0.85rem;
+          font-weight: 600;
+          margin-bottom: 0.35rem;
+        }
+        .input-group input,
+        .input-group select {
+          padding: 0.6rem 0.75rem;
+          border: 1px solid var(--border);
+          border-radius: 6px;
+          font-size: 0.95rem;
+        }
+        .input-group input:focus,
+        .input-group select:focus {
+          outline: none;
+          border-color: var(--primary);
+        }
+        .input-hint {
+          font-size: 0.75rem;
+          color: var(--text-muted);
+          margin-top: 0.25rem;
+        }
+        .remove-loan-btn {
+          background: transparent;
+          border: 1px solid var(--border);
+          color: var(--text-muted);
+          padding: 0.4rem 0.75rem;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.85rem;
+        }
+        .remove-loan-btn:hover {
+          background: var(--error);
+          color: white;
+          border-color: var(--error);
+        }
+
+        .strategy-section {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+        .strategy-section h3 {
+          margin: 0 0 1rem 0;
+        }
+        .extra-payment-input {
+          max-width: 300px;
+        }
+        .extra-payment-input label {
+          display: block;
+          font-weight: 600;
+          margin-bottom: 0.35rem;
+        }
+        .extra-payment-input input {
+          width: 100%;
+          padding: 0.6rem 0.75rem;
+          border: 1px solid var(--border);
+          border-radius: 6px;
+          font-size: 0.95rem;
+        }
+
+        .loan-actions {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+        }
+        .loan-error {
+          background: rgba(239, 68, 68, 0.1);
+          border: 1px solid rgba(239, 68, 68, 0.3);
+          color: var(--error);
+          padding: 0.75rem 1rem;
+          border-radius: 8px;
+          margin-bottom: 1rem;
+          text-align: center;
+          font-size: 0.9rem;
+          display: none;
+        }
+        .loan-error.visible {
+          display: block;
+        }
+
+        .loan-result {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+        }
+
+        .result-summary {
+          margin-bottom: 2rem;
+        }
+        .result-summary h3 {
+          margin: 0 0 1rem 0;
+        }
+        .summary-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+        .summary-item {
+          background: var(--bg);
+          padding: 1rem;
+          border-radius: 8px;
+          text-align: center;
+        }
+        .summary-label {
+          display: block;
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          margin-bottom: 0.5rem;
+        }
+        .summary-value {
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--primary);
+        }
+
+        .loan-details {
+          margin-bottom: 2rem;
+        }
+        .loan-detail-card {
+          background: var(--bg);
+          border-radius: 8px;
+          padding: 1rem;
+          margin-bottom: 0.75rem;
+        }
+        .loan-detail-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.75rem;
+        }
+        .loan-detail-name {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: 600;
+        }
+        .loan-detail-badge {
+          font-size: 0.7rem;
+          background: var(--primary);
+          color: white;
+          padding: 0.15rem 0.4rem;
+          border-radius: 4px;
+          font-weight: 500;
+        }
+        .loan-detail-stats {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+        }
+        .detail-stat {
+          text-align: center;
+        }
+        .detail-stat-label {
+          display: block;
+          font-size: 0.75rem;
+          color: var(--text-muted);
+        }
+        .detail-stat-value {
+          font-weight: 600;
+          color: var(--text);
+        }
+
+        .strategy-comparison {
+          margin-bottom: 2rem;
+        }
+        .strategy-comparison h3 {
+          margin: 0 0 1rem 0;
+        }
+        .strategy-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1rem;
+        }
+        .strategy-card {
+          background: var(--bg);
+          border: 2px solid var(--border);
+          border-radius: 8px;
+          padding: 1.25rem;
+        }
+        .strategy-card.recommended {
+          border-color: var(--success);
+          background: rgba(34, 197, 94, 0.05);
+        }
+        .strategy-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 0.5rem;
+        }
+        .strategy-header h4 {
+          margin: 0;
+          font-size: 1rem;
+        }
+        .recommendation-badge {
+          background: var(--success);
+          color: white;
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+          font-size: 0.7rem;
+          font-weight: 600;
+        }
+        .strategy-desc {
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          margin-bottom: 1rem;
+        }
+        .strategy-stats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.75rem;
+          margin-bottom: 1rem;
+        }
+        .stat-item {
+          background: var(--card-bg);
+          padding: 0.75rem;
+          border-radius: 6px;
+          text-align: center;
+        }
+        .stat-label {
+          display: block;
+          font-size: 0.75rem;
+          color: var(--text-muted);
+          margin-bottom: 0.25rem;
+        }
+        .stat-value {
+          font-weight: 700;
+          color: var(--success);
+        }
+        .payoff-order {
+          font-size: 0.85rem;
+        }
+        .payoff-order-title {
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+        .payoff-order-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+        .payoff-order-item {
+          background: var(--card-bg);
+          padding: 0.25rem 0.6rem;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          display: flex;
+          align-items: center;
+          gap: 0.35rem;
+        }
+        .payoff-order-num {
+          background: var(--primary);
+          color: white;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.7rem;
+          font-weight: 600;
+        }
+
+        .schedule-section {
+        }
+        .schedule-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+        }
+        .schedule-header h3 {
+          margin: 0;
+        }
+        .btn-sm {
+          padding: 0.4rem 0.75rem;
+          font-size: 0.85rem;
+        }
+        .schedule-tabs {
+          display: flex;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+          flex-wrap: wrap;
+        }
+        .schedule-tab {
+          padding: 0.5rem 1rem;
+          border: 1px solid var(--border);
+          background: var(--bg);
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.9rem;
+        }
+        .schedule-tab:hover {
+          border-color: var(--primary);
+        }
+        .schedule-tab.active {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+        .schedule-table-container {
+          overflow-x: auto;
+        }
+        .schedule-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 0.9rem;
+        }
+        .schedule-table th,
+        .schedule-table td {
+          padding: 0.6rem 0.75rem;
+          text-align: right;
+          border-bottom: 1px solid var(--border);
+        }
+        .schedule-table th {
+          background: var(--bg);
+          font-weight: 600;
+          text-align: right;
+        }
+        .schedule-table th:first-child,
+        .schedule-table td:first-child {
+          text-align: center;
+        }
+        .schedule-table tbody tr:hover {
+          background: var(--bg);
+        }
+        .schedule-table .grace-row {
+          background: rgba(245, 158, 11, 0.1);
+        }
+        .schedule-table .grace-row td:first-child {
+          position: relative;
+        }
+        .grace-indicator {
+          font-size: 0.7rem;
+          color: #d97706;
+          margin-left: 0.25rem;
+        }
+
+        .show-more-row td {
+          text-align: center !important;
+          padding: 0.5rem !important;
+          background: var(--card-bg);
+        }
+        .show-more-btn {
+          padding: 0.5rem 1.25rem;
+          border: 1px dashed var(--border);
+          background: transparent;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          transition: all 0.2s;
+        }
+        .show-more-btn:hover {
+          border-color: var(--primary);
+          background: rgba(99, 102, 241, 0.05);
+          color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+          .loan-card-inputs {
+            grid-template-columns: 1fr;
+          }
+          .summary-grid {
+            grid-template-columns: 1fr;
+          }
+          .strategy-grid {
+            grid-template-columns: 1fr;
+          }
+          .loan-detail-stats {
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+          }
+        }
+      </style>
+
+      <script>
+        (function () {
+          const LANG = "en";
+          const T = {
+            loanName: "Loan Name",
+            loanNamePlaceholder: "e.g., Mortgage",
+            principal: "Principal",
+            principalHint: "Remaining loan balance",
+            interestRate: "Annual Interest Rate (%)",
+            interestRateHint: "Annual interest rate",
+            loanTerm: "Loan Term (months)",
+            loanTermHint: "Remaining loan term",
+            repaymentType: "Repayment Type",
+            equalPrincipalInterest: "Equal Payment",
+            equalPrincipal: "Equal Principal",
+            interestOnly: "Interest Only",
+            remove: "Remove",
+            monthlyPayment: "Monthly Payment",
+            totalInterest: "Total Interest",
+            totalPayment: "Total Payment",
+            noLoans: "Please add a loan",
+            payoffOrder: "Payoff Order",
+            months: "months",
+            loanLabel: "Loan",
+            showDetails: "Show Details",
+            hideDetails: "Hide",
+            gracePeriod: "Grace Period (months)",
+            gracePeriodHint: "Interest-only payment period",
+            graceLabel: "Grace",
+            showMore: "Show More",
+            all: LANG === "en" ? "All Loans" : "전체 합계",
+          };
+
+          let loans = [];
+          let loanCounter = 0;
+          let scheduleData = {};
+          let currentTab = "all";
+          let visibleRows = 12;
+          const ROWS_PER_PAGE = 12;
+
+          function formatNumber(num) {
+            return Math.round(num).toLocaleString(
+              LANG === "en" ? "en-US" : "ko-KR"
+            );
+          }
+
+          function formatCurrency(num) {
+            if (LANG === "en") {
+              return "$" + formatNumber(num);
+            }
+            return formatNumber(num) + "원";
+          }
+
+          window.addLoan = function () {
+            loanCounter++;
+            const loanId = "loan-" + loanCounter;
+            const defaultName =
+              LANG === "en" ? "Loan " + loanCounter : "대출 " + loanCounter;
+
+            const container = document.getElementById("loans-container");
+            const card = document.createElement("div");
+            card.className = "loan-card";
+            card.id = loanId;
+            card.innerHTML = `
+      <div class="loan-card-header">
+        <div class="loan-card-title">
+          <span class="loan-number">${loanCounter}</span>
+          <input type="text" class="loan-name-input" value="${defaultName}" placeholder="${T.loanNamePlaceholder}" style="border: none; background: transparent; font-weight: 600; font-size: 1rem; width: 150px;">
+        </div>
+        <button class="remove-loan-btn" onclick="removeLoan('${loanId}')">${T.remove}</button>
+      </div>
+      <div class="loan-card-inputs">
+        <div class="input-group">
+          <label>${T.principal}</label>
+          <input type="number" class="loan-principal" min="0" step="100000" value="50000000" placeholder="50000000">
+          <span class="input-hint">${T.principalHint}</span>
+        </div>
+        <div class="input-group">
+          <label>${T.interestRate}</label>
+          <input type="number" class="loan-rate" min="0" max="100" step="0.1" value="4.5" placeholder="4.5">
+          <span class="input-hint">${T.interestRateHint}</span>
+        </div>
+        <div class="input-group">
+          <label>${T.loanTerm}</label>
+          <input type="number" class="loan-term" min="1" max="600" step="1" value="360" placeholder="360">
+          <span class="input-hint">${T.loanTermHint}</span>
+        </div>
+        <div class="input-group">
+          <label>${T.gracePeriod}</label>
+          <input type="number" class="loan-grace" min="0" max="120" step="1" value="0" placeholder="0">
+          <span class="input-hint">${T.gracePeriodHint}</span>
+        </div>
+        <div class="input-group">
+          <label>${T.repaymentType}</label>
+          <select class="loan-type">
+            <option value="equal-payment">${T.equalPrincipalInterest}</option>
+            <option value="equal-principal">${T.equalPrincipal}</option>
+            <option value="interest-only">${T.interestOnly}</option>
+          </select>
+        </div>
+      </div>
+    `;
+            container.appendChild(card);
+          };
+
+          window.removeLoan = function (loanId) {
+            const card = document.getElementById(loanId);
+            if (card) {
+              card.remove();
+            }
+          };
+
+          function getLoans() {
+            const cards = document.querySelectorAll(".loan-card");
+            return Array.from(cards).map((card, index) => ({
+              id: card.id,
+              name:
+                card.querySelector(".loan-name-input").value ||
+                T.loanLabel + " " + (index + 1),
+              principal:
+                parseFloat(card.querySelector(".loan-principal").value) || 0,
+              rate:
+                parseFloat(card.querySelector(".loan-rate").value) / 100 / 12 ||
+                0,
+              annualRate:
+                parseFloat(card.querySelector(".loan-rate").value) || 0,
+              term: parseInt(card.querySelector(".loan-term").value) || 0,
+              gracePeriod:
+                parseInt(card.querySelector(".loan-grace").value) || 0,
+              type: card.querySelector(".loan-type").value,
+            }));
+          }
+
+          function calculateMonthlyPayment(principal, monthlyRate, term, type) {
+            if (type === "interest-only") {
+              return principal * monthlyRate;
+            }
+            if (type === "equal-principal") {
+              return principal / term + principal * monthlyRate;
+            }
+            // equal-payment (원리금균등)
+            if (monthlyRate === 0) return principal / term;
+            return (
+              (principal * (monthlyRate * Math.pow(1 + monthlyRate, term))) /
+              (Math.pow(1 + monthlyRate, term) - 1)
+            );
+          }
+
+          function generateSchedule(loan) {
+            const schedule = [];
+            let balance = loan.principal;
+            const monthlyRate = loan.rate;
+            const totalTerm = loan.term;
+            const gracePeriod = loan.gracePeriod;
+            const repaymentTerm = totalTerm - gracePeriod;
+            const type = loan.type;
+
+            // Grace period - interest only
+            for (
+              let month = 1;
+              month <= gracePeriod && balance > 0.01;
+              month++
+            ) {
+              const interest = balance * monthlyRate;
+              schedule.push({
+                month,
+                payment: interest,
+                principal: 0,
+                interest,
+                balance,
+                isGrace: true,
+              });
+            }
+
+            // Repayment period
+            if (repaymentTerm > 0 && balance > 0.01) {
+              const equalPrincipalPayment = balance / repaymentTerm;
+              let fixedPayment = 0;
+              if (type === "equal-payment") {
+                fixedPayment = calculateMonthlyPayment(
+                  balance,
+                  monthlyRate,
+                  repaymentTerm,
+                  type
+                );
+              }
+
+              for (let i = 1; i <= repaymentTerm && balance > 0.01; i++) {
+                const month = gracePeriod + i;
+                const interest = balance * monthlyRate;
+                let principal = 0;
+                let payment = 0;
+
+                if (type === "interest-only") {
+                  payment = interest;
+                  if (i === repaymentTerm) {
+                    principal = balance;
+                    payment = interest + balance;
+                  }
+                } else if (type === "equal-principal") {
+                  principal = equalPrincipalPayment;
+                  payment = principal + interest;
+                } else {
+                  payment = fixedPayment;
+                  principal = payment - interest;
+                }
+
+                balance = Math.max(0, balance - principal);
+
+                schedule.push({
+                  month,
+                  payment,
+                  principal,
+                  interest,
+                  balance,
+                  isGrace: false,
+                });
+              }
+            }
+
+            return schedule;
+          }
+
+          function simulatePayoff(loans, extraPayment, strategy) {
+            if (loans.length === 0)
+              return { totalInterest: 0, months: 0, order: [] };
+
+            let loanStates = loans.map((loan) => ({
+              ...loan,
+              balance: loan.principal,
+              paid: false,
+              paidMonth: 0,
+              graceRemaining: loan.gracePeriod,
+            }));
+
+            // Sort by strategy
+            if (strategy === "avalanche") {
+              loanStates.sort((a, b) => b.annualRate - a.annualRate);
+            } else {
+              loanStates.sort((a, b) => a.balance - b.balance);
+            }
+
+            let totalInterest = 0;
+            let month = 0;
+            const maxMonths = 600;
+            const order = [];
+
+            while (loanStates.some((l) => !l.paid) && month < maxMonths) {
+              month++;
+              let extraThisMonth = extraPayment;
+
+              for (const loan of loanStates) {
+                if (loan.paid) continue;
+
+                const interest = loan.balance * loan.rate;
+                totalInterest += interest;
+
+                // During grace period, only pay interest
+                if (loan.graceRemaining > 0) {
+                  loan.graceRemaining--;
+                  continue;
+                }
+
+                const repaymentTerm = loan.term - loan.gracePeriod;
+                let minPayment = calculateMonthlyPayment(
+                  loan.principal,
+                  loan.rate,
+                  repaymentTerm,
+                  loan.type
+                );
+                if (loan.type === "equal-principal") {
+                  minPayment =
+                    loan.principal / repaymentTerm + loan.balance * loan.rate;
+                }
+
+                let payment = minPayment;
+
+                // Apply extra payment to first unpaid loan (in strategy order)
+                const isFirstUnpaid =
+                  loanStates.filter(
+                    (l) => !l.paid && l.graceRemaining === 0
+                  )[0] === loan;
+                if (isFirstUnpaid && extraThisMonth > 0) {
+                  payment += extraThisMonth;
+                  extraThisMonth = 0;
+                }
+
+                const principalPayment = Math.min(
+                  loan.balance,
+                  payment - interest
+                );
+                loan.balance = Math.max(0, loan.balance - principalPayment);
+
+                if (loan.balance < 0.01) {
+                  loan.paid = true;
+                  loan.paidMonth = month;
+                  order.push({ name: loan.name, month });
+                }
+              }
+            }
+
+            return { totalInterest, months: month, order };
+          }
+
+          window.calculate = function () {
+            loans = getLoans();
+
+            if (loans.length === 0) {
+              showError(T.noLoans);
+              return;
+            }
+
+            clearError();
+            visibleRows = ROWS_PER_PAGE;
+            document.getElementById("result").style.display = "block";
+
+            // Calculate individual loan details
+            let totalPrincipal = 0;
+            let totalMonthly = 0;
+            let totalInterest = 0;
+            scheduleData = { all: [] };
+
+            const detailsContainer = document.getElementById("loan-details");
+            detailsContainer.innerHTML = "";
+
+            loans.forEach((loan, index) => {
+              const schedule = generateSchedule(loan);
+              scheduleData[loan.id] = schedule;
+
+              // Find first non-grace payment
+              const firstRepayment = schedule.find((s) => !s.isGrace);
+              const monthlyPayment = firstRepayment
+                ? firstRepayment.payment
+                : schedule[0]?.payment || 0;
+              const loanTotalInterest = schedule.reduce(
+                (sum, s) => sum + s.interest,
+                0
+              );
+              const loanTotalPayment = schedule.reduce(
+                (sum, s) => sum + s.payment,
+                0
+              );
+
+              totalPrincipal += loan.principal;
+              totalMonthly += monthlyPayment;
+              totalInterest += loanTotalInterest;
+
+              const detailCard = document.createElement("div");
+              detailCard.className = "loan-detail-card";
+              detailCard.innerHTML = `
+        <div class="loan-detail-header">
+          <div class="loan-detail-name">
+            <span class="loan-number">${index + 1}</span>
+            ${loan.name}
+            ${
+              loan.gracePeriod > 0
+                ? `<span class="loan-detail-badge">${T.graceLabel} ${
+                    loan.gracePeriod
+                  }${LANG === "en" ? "mo" : "개월"}</span>`
+                : ""
+            }
+          </div>
+        </div>
+        <div class="loan-detail-stats">
+          <div class="detail-stat">
+            <span class="detail-stat-label">${T.monthlyPayment}</span>
+            <span class="detail-stat-value">${formatCurrency(
+              monthlyPayment
+            )}</span>
+          </div>
+          <div class="detail-stat">
+            <span class="detail-stat-label">${T.totalInterest}</span>
+            <span class="detail-stat-value">${formatCurrency(
+              loanTotalInterest
+            )}</span>
+          </div>
+          <div class="detail-stat">
+            <span class="detail-stat-label">${T.totalPayment}</span>
+            <span class="detail-stat-value">${formatCurrency(
+              loanTotalPayment
+            )}</span>
+          </div>
+        </div>
+      `;
+              detailsContainer.appendChild(detailCard);
+            });
+
+            // Combine all schedules
+            const maxMonths = Math.max(...loans.map((l) => l.term));
+            for (let month = 1; month <= maxMonths; month++) {
+              let payment = 0,
+                principal = 0,
+                interest = 0,
+                balance = 0;
+              let hasGrace = false;
+              loans.forEach((loan) => {
+                const s = scheduleData[loan.id];
+                if (s && s[month - 1]) {
+                  payment += s[month - 1].payment;
+                  principal += s[month - 1].principal;
+                  interest += s[month - 1].interest;
+                  if (s[month - 1].isGrace) hasGrace = true;
+                }
+              });
+              // Calculate remaining balance
+              loans.forEach((loan) => {
+                const s = scheduleData[loan.id];
+                if (s && s[month - 1]) {
+                  balance += s[month - 1].balance;
+                } else if (s && month <= loan.term) {
+                  balance += s[s.length - 1]?.balance || 0;
+                }
+              });
+              scheduleData.all.push({
+                month,
+                payment,
+                principal,
+                interest,
+                balance,
+                isGrace: hasGrace,
+              });
+            }
+
+            // Update summary
+            document.getElementById("total-principal").textContent =
+              formatCurrency(totalPrincipal);
+            document.getElementById("total-monthly").textContent =
+              formatCurrency(totalMonthly);
+            document.getElementById("total-interest").textContent =
+              formatCurrency(totalInterest);
+
+            // Strategy comparison
+            const extraPayment =
+              parseFloat(document.getElementById("extra-payment").value) || 0;
+
+            if (extraPayment > 0 && loans.length > 1) {
+              document.getElementById("strategy-comparison").style.display =
+                "block";
+
+              const baseResult = simulatePayoff(loans, 0, "avalanche");
+              const avalancheResult = simulatePayoff(
+                loans,
+                extraPayment,
+                "avalanche"
+              );
+              const snowballResult = simulatePayoff(
+                loans,
+                extraPayment,
+                "snowball"
+              );
+
+              const avalancheSaved =
+                baseResult.totalInterest - avalancheResult.totalInterest;
+              const snowballSaved =
+                baseResult.totalInterest - snowballResult.totalInterest;
+              const avalancheMonthsSaved =
+                baseResult.months - avalancheResult.months;
+              const snowballMonthsSaved =
+                baseResult.months - snowballResult.months;
+
+              document.getElementById("avalanche-saved").textContent =
+                formatCurrency(avalancheSaved);
+              document.getElementById("avalanche-months").textContent =
+                avalancheMonthsSaved + " " + T.months;
+              document.getElementById("snowball-saved").textContent =
+                formatCurrency(snowballSaved);
+              document.getElementById("snowball-months").textContent =
+                snowballMonthsSaved + " " + T.months;
+
+              // Payoff order
+              renderPayoffOrder("avalanche-order", avalancheResult.order);
+              renderPayoffOrder("snowball-order", snowballResult.order);
+
+              // Recommendation
+              const avalancheCard = document.getElementById("avalanche-card");
+              const snowballCard = document.getElementById("snowball-card");
+              const avalancheBadge = document.getElementById("avalanche-badge");
+              const snowballBadge = document.getElementById("snowball-badge");
+
+              avalancheCard.classList.remove("recommended");
+              snowballCard.classList.remove("recommended");
+              avalancheBadge.style.display = "none";
+              snowballBadge.style.display = "none";
+
+              if (avalancheSaved > snowballSaved) {
+                avalancheCard.classList.add("recommended");
+                avalancheBadge.style.display = "inline";
+              } else if (snowballSaved > avalancheSaved) {
+                snowballCard.classList.add("recommended");
+                snowballBadge.style.display = "inline";
+              } else {
+                avalancheCard.classList.add("recommended");
+                avalancheBadge.style.display = "inline";
+              }
+            } else {
+              document.getElementById("strategy-comparison").style.display =
+                "none";
+            }
+
+            // Schedule tabs
+            renderScheduleTabs();
+            renderSchedule(currentTab);
+          };
+
+          function renderPayoffOrder(containerId, order) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `
+      <div class="payoff-order-title">${T.payoffOrder}:</div>
+      <div class="payoff-order-list">
+        ${order
+          .map(
+            (item, i) => `
+          <span class="payoff-order-item">
+            <span class="payoff-order-num">${i + 1}</span>
+            ${item.name}
+          </span>
+        `
+          )
+          .join("")}
+      </div>
+    `;
+          }
+
+          function renderScheduleTabs() {
+            const container = document.getElementById("schedule-tabs");
+            let html = `<button class="schedule-tab ${
+              currentTab === "all" ? "active" : ""
+            }" onclick="switchTab('all')">${T.all}</button>`;
+            loans.forEach((loan) => {
+              html += `<button class="schedule-tab ${
+                currentTab === loan.id ? "active" : ""
+              }" onclick="switchTab('${loan.id}')">${loan.name}</button>`;
+            });
+            container.innerHTML = html;
+          }
+
+          window.switchTab = function (tabId) {
+            currentTab = tabId;
+            visibleRows = ROWS_PER_PAGE;
+            renderScheduleTabs();
+            renderSchedule(tabId);
+          };
+
+          function renderSchedule(loanId) {
+            const schedule = scheduleData[loanId];
+            if (!schedule) return;
+
+            const tbody = document.getElementById("schedule-body");
+            const totalMonths = schedule.length;
+
+            // Render table rows
+            let html = "";
+
+            // Show first visibleRows
+            const firstPartEnd = Math.min(visibleRows, totalMonths);
+            for (let i = 0; i < firstPartEnd; i++) {
+              html += renderRow(schedule[i]);
+            }
+
+            // If there are hidden rows, show "more" button row and last row
+            const hiddenCount = totalMonths - visibleRows - 1; // -1 for last row
+            if (hiddenCount > 0) {
+              const nextEnd = Math.min(
+                visibleRows + ROWS_PER_PAGE,
+                totalMonths - 1
+              );
+              const btnText =
+                LANG === "en"
+                  ? `Show ${visibleRows + 1} - ${nextEnd}`
+                  : `${visibleRows + 1} ~ ${nextEnd}월 보기`;
+              html += `
+        <tr class="show-more-row">
+          <td colspan="5">
+            <button class="show-more-btn" onclick="showMore()">▼ ${btnText}</button>
+          </td>
+        </tr>
+      `;
+              // Show last row
+              html += renderRow(schedule[totalMonths - 1]);
+            }
+
+            tbody.innerHTML = html;
+          }
+
+          function renderRow(s) {
+            const graceClass = s.isGrace ? ' class="grace-row"' : "";
+            const graceIndicator = s.isGrace
+              ? `<span class="grace-indicator">(${T.graceLabel})</span>`
+              : "";
+            return `
+      <tr${graceClass}>
+        <td>${s.month}${graceIndicator}</td>
+        <td>${formatCurrency(s.payment)}</td>
+        <td>${formatCurrency(s.principal)}</td>
+        <td>${formatCurrency(s.interest)}</td>
+        <td>${formatCurrency(s.balance)}</td>
+      </tr>
+    `;
+          }
+
+          window.showMore = function () {
+            visibleRows += ROWS_PER_PAGE;
+            renderSchedule(currentTab);
+          };
+
+          window.downloadSchedule = function () {
+            const schedule = scheduleData[currentTab];
+            if (!schedule) return;
+
+            const loanName =
+              currentTab === "all"
+                ? T.all
+                : loans.find((l) => l.id === currentTab)?.name || "Loan";
+
+            let csv = "Month,Payment,Principal,Interest,Balance,Grace\n";
+            schedule.forEach((s) => {
+              csv += `${s.month},${Math.round(s.payment)},${Math.round(
+                s.principal
+              )},${Math.round(s.interest)},${Math.round(s.balance)},${
+                s.isGrace ? "Y" : "N"
+              }\n`;
+            });
+
+            const blob = new Blob(["\ufeff" + csv], {
+              type: "text/csv;charset=utf-8;",
+            });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = `loan-schedule-${loanName}.csv`;
+            link.click();
+          };
+
+          window.resetAll = function () {
+            document.getElementById("loans-container").innerHTML = "";
+            document.getElementById("extra-payment").value = "0";
+            document.getElementById("result").style.display = "none";
+            clearError();
+            loanCounter = 0;
+            loans = [];
+            scheduleData = {};
+            currentTab = "all";
+            visibleRows = ROWS_PER_PAGE;
+            addLoan();
+          };
+
+          function showError(msg) {
+            const el = document.getElementById("error-msg");
+            el.textContent = msg;
+            el.classList.add("visible");
+          }
+
+          function clearError() {
+            const el = document.getElementById("error-msg");
+            el.textContent = "";
+            el.classList.remove("visible");
+          }
+
+          // Initialize with one loan
+          document.addEventListener("DOMContentLoaded", () => {
+            addLoan();
+          });
+        })();
+      </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 tools.pllip.com</p>
+        <div class="lang-switcher">
+          <a href="/loan/" class="lang-btn">한국어</a>
+          <a href="/en/loan/" class="lang-btn active">English</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Nav scroll arrows
+        const menu = document.getElementById("nav-menu");
+        const prevBtn = document.querySelector(".nav-prev");
+        const nextBtn = document.querySelector(".nav-next");
+
+        function updateArrows() {
+          const needsScroll = menu.scrollWidth > menu.clientWidth;
+          const atStart = menu.scrollLeft <= 0;
+          const atEnd =
+            menu.scrollLeft >= menu.scrollWidth - menu.clientWidth - 1;
+
+          if (needsScroll) {
+            prevBtn.classList.add("visible");
+            nextBtn.classList.add("visible");
+            prevBtn.classList.toggle("hidden", atStart);
+            nextBtn.classList.toggle("hidden", atEnd);
+          } else {
+            prevBtn.classList.remove("visible");
+            nextBtn.classList.remove("visible");
+          }
+        }
+
+        prevBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: -150, behavior: "smooth" })
+        );
+        nextBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: 150, behavior: "smooth" })
+        );
+        menu.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+
+        // Scroll to active menu item on load
+        const activeItem = menu.querySelector("a.active");
+        if (activeItem) {
+          const li = activeItem.parentElement;
+          const menuRect = menu.getBoundingClientRect();
+          const liRect = li.getBoundingClientRect();
+          const scrollLeft =
+            li.offsetLeft - menuRect.width / 2 + liRect.width / 2;
+          menu.scrollLeft = Math.max(0, scrollLeft);
+        }
+        updateArrows();
+
+        // Header search dropdown
+        const searchBtn = document.getElementById("search-btn");
+        const dropdown = document.getElementById("search-dropdown");
+        const searchInput = document.getElementById("header-search");
+        const results = document.getElementById("search-results");
+        const items = results.querySelectorAll("li");
+
+        searchBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("open");
+          if (dropdown.classList.contains("open")) {
+            searchInput.focus();
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target) && e.target !== searchBtn) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        searchInput.addEventListener("input", () => {
+          const q = searchInput.value.toLowerCase().trim();
+          let visible = 0;
+          items.forEach((li) => {
+            const a = li.querySelector("a");
+            const text = a.textContent.toLowerCase();
+            const keywords = (a.dataset.keywords || "").toLowerCase();
+            const match = !q || text.includes(q) || keywords.includes(q);
+            li.classList.toggle("hidden", !match);
+            if (match) visible++;
+          });
+        });
+
+        // Keyboard shortcut: Cmd/Ctrl + K
+        document.addEventListener("keydown", (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+            e.preventDefault();
+            dropdown.classList.add("open");
+            searchInput.focus();
+          }
+          if (e.key === "Escape") {
+            dropdown.classList.remove("open");
+          }
+        });
+      })();
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"a47e96a534854c899db066813b9421c4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

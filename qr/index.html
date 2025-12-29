@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y4NESGBMLL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y4NESGBMLL");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="google-site-verification"
+      content="cDLyhRNtMYZ7c8fZmg7rM7l9lP3wVbbUQ9ttgZvIhUs"
+    />
+    <meta
+      name="naver-site-verification"
+      content="569e4fc689a9e3f30dba5f04416b73c010a6143d"
+    />
+
+    <title>QR 코드 생성기 - MyTools</title>
+    <meta
+      name="description"
+      content="무료 QR 코드 생성기. URL, 텍스트, WiFi, 연락처를 QR 코드로 만드세요."
+    />
+    <meta
+      name="keywords"
+      content="QR 코드, QR 생성, QR 코드 만들기, WiFi QR, 무료 QR"
+    />
+
+    <!-- Open Graph / SNS 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="QR 코드 생성기" />
+    <meta
+      property="og:description"
+      content="무료 QR 코드 생성기. URL, 텍스트, WiFi, 연락처를 QR 코드로 만드세요."
+    />
+    <meta property="og:url" content="https://tools.pllip.com/qr/" />
+    <meta property="og:site_name" content="MyTools" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="QR 코드 생성기" />
+    <meta
+      name="twitter:description"
+      content="무료 QR 코드 생성기. URL, 텍스트, WiFi, 연락처를 QR 코드로 만드세요."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tools.pllip.com/qr/" />
+
+    <!-- Alternate language links -->
+
+    <link rel="alternate" hreflang="ko" href="https://tools.pllip.com/qr/" />
+    <link rel="alternate" hreflang="en" href="https://tools.pllip.com/en/qr/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tools.pllip.com/qr/"
+    />
+
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tools.pllip.com",
+        "alternateName": "온라인 도구",
+        "url": "https://tools.pllip.com",
+        "description": "온라인 도구 모음. IP 주소 확인, QR 코드 생성, JSON/XML 포매터, Markdown 뷰어, Base64 변환, 정규식 테스터를 제공합니다.",
+        "inLanguage": "ko",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tools.pllip.com/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "QR 코드 생성",
+        "description": "URL, 텍스트, WiFi 정보를 QR 코드로 만드세요",
+        "url": "https://tools.pllip.com/qr/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "ko",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tools.pllip.com",
+          "url": "https://tools.pllip.com"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css?v=80f21ced" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" class="logo"
+          ><span class="logo-full">tools.pllip.com</span
+          ><span class="logo-short">tools</span></a
+        >
+        <div class="nav-wrapper">
+          <button class="nav-arrow nav-prev" aria-label="이전">&#8249;</button>
+          <ul id="nav-menu">
+            <li><a href="/ip/">IP 확인</a></li>
+
+            <li><a href="/qr/" class="active">QR 생성</a></li>
+
+            <li><a href="/json/">JSON</a></li>
+
+            <li><a href="/xml/">XML</a></li>
+
+            <li><a href="/md/">Markdown</a></li>
+
+            <li><a href="/base64/">Base64</a></li>
+
+            <li><a href="/regex/">정규식</a></li>
+
+            <li><a href="/uuid/">UUID</a></li>
+
+            <li><a href="/hash/">해시</a></li>
+
+            <li><a href="/ladder/">사다리</a></li>
+
+            <li><a href="/kelly/">켈리</a></li>
+
+            <li><a href="/sudoku/">수도쿠</a></li>
+
+            <li><a href="/loan/">대출</a></li>
+          </ul>
+          <button class="nav-arrow nav-next" aria-label="다음">&#8250;</button>
+        </div>
+        <div class="nav-search">
+          <button class="search-btn" id="search-btn" aria-label="검색">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="도구 검색..."
+              autocomplete="off"
+            />
+            <ul id="search-results">
+              <li>
+                <a
+                  href="/ip/"
+                  data-keywords="ip address 아이피 주소 ipv4 ipv6 내아이피 myip whatismyip 위치 location IP 주소 확인 IP 확인"
+                  >🌐 IP 주소 확인</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/qr/"
+                  data-keywords="qr code 큐알 qr코드 barcode 바코드 wifi 와이파이 vcard 명함 QR 코드 생성 QR 생성"
+                  >📱 QR 코드 생성</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/json/"
+                  data-keywords="json formatter beautify beautifier minify 제이슨 포맷 정렬 압축 validate 검증 parser JSON 포매터 JSON"
+                  >{ } JSON 포매터</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/xml/"
+                  data-keywords="xml formatter beautify 포맷 정렬 html xhtml convert 변환 XML 포매터 XML"
+                  >&lt;/&gt; XML 포매터</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/md/"
+                  data-keywords="markdown 마크다운 md preview 미리보기 editor 에디터 github readme Markdown 뷰어 Markdown"
+                  >M↓ Markdown 뷰어</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/base64/"
+                  data-keywords="base64 encode decode 인코딩 디코딩 인코더 디코더 encoder decoder 변환 Base64 변환 Base64"
+                  >B64 Base64 변환</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/regex/"
+                  data-keywords="regex regexp 정규식 정규표현식 regular expression pattern 패턴 test tester 테스트 정규식 테스터 정규식"
+                  >.* 정규식 테스터</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/uuid/"
+                  data-keywords="uuid guid 고유식별자 unique id generator 생성기 랜덤 UUID 생성기 UUID"
+                  ># UUID 생성기</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/hash/"
+                  data-keywords="hash 해시 md5 sha1 sha256 sha512 checksum 체크섬 암호화 해시 생성기 해시"
+                  >## 해시 생성기</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/ladder/"
+                  data-keywords="ladder game 사다리 사다리게임 사다리타기 추첨 제비뽑기 랜덤 순서정하기 사다리 게임 사다리"
+                  >🪜 사다리 게임</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/kelly/"
+                  data-keywords="kelly criterion 켈리 기준 베팅 투자 비율 자금관리 bankroll 확률 배당률 켈리 기준 계산기 켈리"
+                  >📊 켈리 기준 계산기</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/sudoku/"
+                  data-keywords="sudoku 수도쿠 스도쿠 퍼즐 puzzle 숫자게임 두뇌게임 브레인게임 논리 풀이 힌트 solver 수도쿠 수도쿠"
+                  >9 수도쿠</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/loan/"
+                  data-keywords="대출 계산기 loan calculator 상환 원리금균등 원금균등 이자 mortgage 주택담보대출 신용대출 학자금 대출 상환 계산기 대출"
+                  >💰 대출 상환 계산기</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="qr-container">
+        <div class="qr-tabs">
+          <button class="qr-tab active" data-type="url">URL</button>
+          <button class="qr-tab" data-type="text">텍스트</button>
+          <button class="qr-tab" data-type="wifi">WiFi</button>
+          <button class="qr-tab" data-type="vcard">연락처</button>
+        </div>
+
+        <div class="qr-input-group" id="input-url">
+          <label for="qr-url">URL 주소</label>
+          <input
+            type="url"
+            id="qr-url"
+            placeholder="https://tools.pllip.com"
+            value="https://tools.pllip.com"
+          />
+        </div>
+
+        <div class="qr-input-group" id="input-text" style="display: none">
+          <label for="qr-text">텍스트 내용</label>
+          <textarea
+            id="qr-text"
+            placeholder="QR 코드로 만들 텍스트를 입력하세요"
+          ></textarea>
+        </div>
+
+        <div class="qr-input-group" id="input-wifi" style="display: none">
+          <label for="wifi-ssid">WiFi 이름 (SSID)</label>
+          <input type="text" id="wifi-ssid" placeholder="WiFi Name" />
+          <label for="wifi-password" style="margin-top: 1rem; display: block"
+            >비밀번호</label
+          >
+          <input type="text" id="wifi-password" placeholder="비밀번호" />
+          <label for="wifi-encryption" style="margin-top: 1rem; display: block"
+            >암호화 방식</label
+          >
+          <select id="wifi-encryption">
+            <option value="WPA">WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">없음 (오픈)</option>
+          </select>
+        </div>
+
+        <div class="qr-input-group" id="input-vcard" style="display: none">
+          <label for="vcard-name">이름</label>
+          <input type="text" id="vcard-name" placeholder="홍길동" />
+          <label for="vcard-phone" style="margin-top: 1rem; display: block"
+            >전화번호</label
+          >
+          <input type="tel" id="vcard-phone" placeholder="010-1234-5678" />
+          <label for="vcard-email" style="margin-top: 1rem; display: block"
+            >이메일</label
+          >
+          <input
+            type="email"
+            id="vcard-email"
+            placeholder="email@example.com"
+          />
+          <label for="vcard-company" style="margin-top: 1rem; display: block"
+            >회사</label
+          >
+          <input type="text" id="vcard-company" placeholder="회사" />
+        </div>
+
+        <div class="qr-input-group">
+          <label for="qr-size">크기</label>
+          <select id="qr-size">
+            <option value="200">200 x 200</option>
+            <option value="300" selected>300 x 300</option>
+            <option value="400">400 x 400</option>
+            <option value="500">500 x 500</option>
+          </select>
+          <label for="qr-error" style="margin-top: 1rem; display: block"
+            >오류 정정 레벨</label
+          >
+          <select id="qr-error">
+            <option value="L">L - 7% 복구</option>
+            <option value="M" selected>M - 15% 복구 (권장)</option>
+            <option value="Q">Q - 25% 복구</option>
+            <option value="H">H - 30% 복구</option>
+          </select>
+          <label for="qr-color" style="margin-top: 1rem; display: block"
+            >QR 색상</label
+          >
+          <input
+            type="color"
+            id="qr-color"
+            value="#000000"
+            style="
+              width: 60px;
+              height: 40px;
+              padding: 0;
+              border: 1px solid var(--border);
+              border-radius: 4px;
+            "
+          />
+        </div>
+
+        <div class="ad-container">광고 영역</div>
+
+        <div class="qr-preview">
+          <div id="qr-canvas"></div>
+        </div>
+
+        <div class="qr-actions">
+          <button class="btn btn-primary" onclick="downloadQR()">
+            PNG 다운로드
+          </button>
+        </div>
+      </div>
+
+      <script src="/js/qrcode.min.js?v=517b55d3"></script>
+      <script>
+        let currentType = "url";
+        const qrContainer = document.getElementById("qr-canvas");
+        let qrCode = null;
+
+        document.querySelectorAll(".qr-tab").forEach((tab) => {
+          tab.addEventListener("click", () => {
+            document
+              .querySelectorAll(".qr-tab")
+              .forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+            currentType = tab.dataset.type;
+            document
+              .querySelectorAll('[id^="input-"]')
+              .forEach((el) => (el.style.display = "none"));
+            document.getElementById(`input-${currentType}`).style.display =
+              "block";
+            generateQR();
+          });
+        });
+
+        document.querySelectorAll("input, textarea, select").forEach((el) => {
+          el.addEventListener("input", generateQR);
+          el.addEventListener("change", generateQR);
+        });
+
+        function getQRData() {
+          switch (currentType) {
+            case "url":
+              return (
+                document.getElementById("qr-url").value ||
+                "https://tools.pllip.com"
+              );
+            case "text":
+              return document.getElementById("qr-text").value || "Hello World";
+            case "wifi":
+              const ssid = document.getElementById("wifi-ssid").value;
+              const password = document.getElementById("wifi-password").value;
+              const encryption =
+                document.getElementById("wifi-encryption").value;
+              if (!ssid) return "WIFI:S:MyWiFi;T:WPA;P:password;;";
+              if (encryption === "nopass") return `WIFI:S:${ssid};T:nopass;;`;
+              return `WIFI:S:${ssid};T:${encryption};P:${password};;`;
+            case "vcard":
+              const name =
+                document.getElementById("vcard-name").value || "홍길동";
+              const phone = document.getElementById("vcard-phone").value || "";
+              const email = document.getElementById("vcard-email").value || "";
+              const company =
+                document.getElementById("vcard-company").value || "";
+              let vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${name}\n`;
+              if (phone) vcard += `TEL:${phone}\n`;
+              if (email) vcard += `EMAIL:${email}\n`;
+              if (company) vcard += `ORG:${company}\n`;
+              vcard += "END:VCARD";
+              return vcard;
+            default:
+              return "https://example.com";
+          }
+        }
+
+        function generateQR() {
+          const data = getQRData();
+          const size = parseInt(document.getElementById("qr-size").value);
+          const color = document.getElementById("qr-color").value;
+          const errorLevel = document.getElementById("qr-error").value;
+
+          const correctLevels = {
+            L: QRCode.CorrectLevel.L,
+            M: QRCode.CorrectLevel.M,
+            Q: QRCode.CorrectLevel.Q,
+            H: QRCode.CorrectLevel.H,
+          };
+
+          qrContainer.innerHTML = "";
+          qrCode = new QRCode(qrContainer, {
+            text: data,
+            width: size,
+            height: size,
+            colorDark: color,
+            colorLight: "#ffffff",
+            correctLevel: correctLevels[errorLevel],
+          });
+        }
+
+        function downloadQR() {
+          const img = qrContainer.querySelector("img");
+          const canvas = qrContainer.querySelector("canvas");
+          const link = document.createElement("a");
+          link.download = "qrcode.png";
+          if (canvas) {
+            link.href = canvas.toDataURL("image/png");
+          } else if (img) {
+            link.href = img.src;
+          }
+          link.click();
+        }
+
+        generateQR();
+      </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 tools.pllip.com</p>
+        <div class="lang-switcher">
+          <a href="/qr/" class="lang-btn active">한국어</a>
+          <a href="/en/qr/" class="lang-btn">English</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Nav scroll arrows
+        const menu = document.getElementById("nav-menu");
+        const prevBtn = document.querySelector(".nav-prev");
+        const nextBtn = document.querySelector(".nav-next");
+
+        function updateArrows() {
+          const needsScroll = menu.scrollWidth > menu.clientWidth;
+          const atStart = menu.scrollLeft <= 0;
+          const atEnd =
+            menu.scrollLeft >= menu.scrollWidth - menu.clientWidth - 1;
+
+          if (needsScroll) {
+            prevBtn.classList.add("visible");
+            nextBtn.classList.add("visible");
+            prevBtn.classList.toggle("hidden", atStart);
+            nextBtn.classList.toggle("hidden", atEnd);
+          } else {
+            prevBtn.classList.remove("visible");
+            nextBtn.classList.remove("visible");
+          }
+        }
+
+        prevBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: -150, behavior: "smooth" })
+        );
+        nextBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: 150, behavior: "smooth" })
+        );
+        menu.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+
+        // Scroll to active menu item on load
+        const activeItem = menu.querySelector("a.active");
+        if (activeItem) {
+          const li = activeItem.parentElement;
+          const menuRect = menu.getBoundingClientRect();
+          const liRect = li.getBoundingClientRect();
+          const scrollLeft =
+            li.offsetLeft - menuRect.width / 2 + liRect.width / 2;
+          menu.scrollLeft = Math.max(0, scrollLeft);
+        }
+        updateArrows();
+
+        // Header search dropdown
+        const searchBtn = document.getElementById("search-btn");
+        const dropdown = document.getElementById("search-dropdown");
+        const searchInput = document.getElementById("header-search");
+        const results = document.getElementById("search-results");
+        const items = results.querySelectorAll("li");
+
+        searchBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("open");
+          if (dropdown.classList.contains("open")) {
+            searchInput.focus();
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target) && e.target !== searchBtn) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        searchInput.addEventListener("input", () => {
+          const q = searchInput.value.toLowerCase().trim();
+          let visible = 0;
+          items.forEach((li) => {
+            const a = li.querySelector("a");
+            const text = a.textContent.toLowerCase();
+            const keywords = (a.dataset.keywords || "").toLowerCase();
+            const match = !q || text.includes(q) || keywords.includes(q);
+            li.classList.toggle("hidden", !match);
+            if (match) visible++;
+          });
+        });
+
+        // Keyboard shortcut: Cmd/Ctrl + K
+        document.addEventListener("keydown", (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+            e.preventDefault();
+            dropdown.classList.add("open");
+            searchInput.focus();
+          }
+          if (e.key === "Escape") {
+            dropdown.classList.remove("open");
+          }
+        });
+      })();
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"a47e96a534854c899db066813b9421c4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9b4e890b3a3f2779',t:'MTc2Njg5ODQ1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

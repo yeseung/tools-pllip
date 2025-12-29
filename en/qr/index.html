@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y4NESGBMLL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y4NESGBMLL");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QR Code Generator - MyTools</title>
+    <meta
+      name="description"
+      content="Free QR code generator. Create QR codes for URLs, text, WiFi, and contacts."
+    />
+    <meta
+      name="keywords"
+      content="QR code, QR generator, create QR code, WiFi QR, free QR"
+    />
+
+    <!-- Open Graph / SNS 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="QR Code Generator" />
+    <meta
+      property="og:description"
+      content="Free QR code generator. Create QR codes for URLs, text, WiFi, and contacts."
+    />
+    <meta property="og:url" content="https://tools.pllip.com/en/qr/" />
+    <meta property="og:site_name" content="MyTools" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="QR Code Generator" />
+    <meta
+      name="twitter:description"
+      content="Free QR code generator. Create QR codes for URLs, text, WiFi, and contacts."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tools.pllip.com/en/qr/" />
+
+    <!-- Alternate language links -->
+
+    <link rel="alternate" hreflang="ko" href="https://tools.pllip.com/qr/" />
+    <link rel="alternate" hreflang="en" href="https://tools.pllip.com/en/qr/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tools.pllip.com/qr/"
+    />
+
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tools.pllip.com",
+        "alternateName": "Online Tools",
+        "url": "https://tools.pllip.com/en/",
+        "description": "Free online tools collection. IP address lookup, QR code generator, JSON/XML formatter, Markdown viewer, Base64 converter, and regex tester.",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tools.pllip.com/en/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "QR Code Generator",
+        "description": "Create QR codes for URLs, text, and WiFi",
+        "url": "https://tools.pllip.com/en/qr/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tools.pllip.com",
+          "url": "https://tools.pllip.com"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css?v=80f21ced" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/en/" class="logo"
+          ><span class="logo-full">tools.pllip.com</span
+          ><span class="logo-short">tools</span></a
+        >
+        <div class="nav-wrapper">
+          <button class="nav-arrow nav-prev" aria-label="Previous">
+            &#8249;
+          </button>
+          <ul id="nav-menu">
+            <li><a href="/en/ip/">IP Check</a></li>
+
+            <li><a href="/en/qr/" class="active">QR Code</a></li>
+
+            <li><a href="/en/json/">JSON</a></li>
+
+            <li><a href="/en/xml/">XML</a></li>
+
+            <li><a href="/en/md/">Markdown</a></li>
+
+            <li><a href="/en/base64/">Base64</a></li>
+
+            <li><a href="/en/regex/">Regex</a></li>
+
+            <li><a href="/en/uuid/">UUID</a></li>
+
+            <li><a href="/en/hash/">Hash</a></li>
+
+            <li><a href="/en/ladder/">Ladder</a></li>
+
+            <li><a href="/en/kelly/">Kelly</a></li>
+
+            <li><a href="/en/sudoku/">Sudoku</a></li>
+
+            <li><a href="/en/loan/">Loan</a></li>
+          </ul>
+          <button class="nav-arrow nav-next" aria-label="Next">&#8250;</button>
+        </div>
+        <div class="nav-search">
+          <button class="search-btn" id="search-btn" aria-label="Search">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Search tools..."
+              autocomplete="off"
+            />
+            <ul id="search-results">
+              <li>
+                <a
+                  href="/en/ip/"
+                  data-keywords="ip address ipv4 ipv6 myip whatismyip location lookup IP Address Lookup IP Check"
+                  >🌐 IP Address Lookup</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/qr/"
+                  data-keywords="qr code barcode wifi vcard generator create QR Code Generator QR Code"
+                  >📱 QR Code Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/json/"
+                  data-keywords="json formatter beautify minify validate parser JSON Formatter JSON"
+                  >{ } JSON Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/xml/"
+                  data-keywords="xml formatter beautify html xhtml convert json XML Formatter XML"
+                  >&lt;/&gt; XML Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/md/"
+                  data-keywords="markdown md preview editor github readme Markdown Viewer Markdown"
+                  >M↓ Markdown Viewer</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/base64/"
+                  data-keywords="base64 encode decode encoder decoder converter Base64 Converter Base64"
+                  >B64 Base64 Converter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/regex/"
+                  data-keywords="regex regexp regular expression pattern tester Regex Tester Regex"
+                  >.* Regex Tester</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/uuid/"
+                  data-keywords="uuid guid unique id generator random UUID Generator UUID"
+                  ># UUID Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/hash/"
+                  data-keywords="hash md5 sha1 sha256 sha512 checksum generator Hash Generator Hash"
+                  >## Hash Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/ladder/"
+                  data-keywords="ladder game random picker lottery selection Ladder Game Ladder"
+                  >🪜 Ladder Game</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/kelly/"
+                  data-keywords="kelly criterion betting investment ratio bankroll odds Kelly Criterion Calculator Kelly"
+                  >📊 Kelly Criterion Calculator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/sudoku/"
+                  data-keywords="sudoku puzzle number game brain logic solver hints Sudoku Sudoku"
+                  >9 Sudoku</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/loan/"
+                  data-keywords="loan calculator repayment mortgage amortization interest rate debt payoff strategy Loan Repayment Calculator Loan"
+                  >💰 Loan Repayment Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="qr-container">
+        <div class="qr-tabs">
+          <button class="qr-tab active" data-type="url">URL</button>
+          <button class="qr-tab" data-type="text">Text</button>
+          <button class="qr-tab" data-type="wifi">WiFi</button>
+          <button class="qr-tab" data-type="vcard">Contact</button>
+        </div>
+
+        <div class="qr-input-group" id="input-url">
+          <label for="qr-url">URL Address</label>
+          <input
+            type="url"
+            id="qr-url"
+            placeholder="https://tools.pllip.com"
+            value="https://tools.pllip.com"
+          />
+        </div>
+
+        <div class="qr-input-group" id="input-text" style="display: none">
+          <label for="qr-text">Text Content</label>
+          <textarea
+            id="qr-text"
+            placeholder="Enter text to create QR code"
+          ></textarea>
+        </div>
+
+        <div class="qr-input-group" id="input-wifi" style="display: none">
+          <label for="wifi-ssid">WiFi Name (SSID)</label>
+          <input type="text" id="wifi-ssid" placeholder="WiFi Name" />
+          <label for="wifi-password" style="margin-top: 1rem; display: block"
+            >Password</label
+          >
+          <input type="text" id="wifi-password" placeholder="Password" />
+          <label for="wifi-encryption" style="margin-top: 1rem; display: block"
+            >Encryption</label
+          >
+          <select id="wifi-encryption">
+            <option value="WPA">WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">None (Open)</option>
+          </select>
+        </div>
+
+        <div class="qr-input-group" id="input-vcard" style="display: none">
+          <label for="vcard-name">Name</label>
+          <input type="text" id="vcard-name" placeholder="John Doe" />
+          <label for="vcard-phone" style="margin-top: 1rem; display: block"
+            >Phone</label
+          >
+          <input type="tel" id="vcard-phone" placeholder="010-1234-5678" />
+          <label for="vcard-email" style="margin-top: 1rem; display: block"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="vcard-email"
+            placeholder="email@example.com"
+          />
+          <label for="vcard-company" style="margin-top: 1rem; display: block"
+            >Company</label
+          >
+          <input type="text" id="vcard-company" placeholder="Company" />
+        </div>
+
+        <div class="qr-input-group">
+          <label for="qr-size">Size</label>
+          <select id="qr-size">
+            <option value="200">200 x 200</option>
+            <option value="300" selected>300 x 300</option>
+            <option value="400">400 x 400</option>
+            <option value="500">500 x 500</option>
+          </select>
+          <label for="qr-error" style="margin-top: 1rem; display: block"
+            >Error Correction Level</label
+          >
+          <select id="qr-error">
+            <option value="L">L - 7% recovery</option>
+            <option value="M" selected>M - 15% recovery (recommended)</option>
+            <option value="Q">Q - 25% recovery</option>
+            <option value="H">H - 30% recovery</option>
+          </select>
+          <label for="qr-color" style="margin-top: 1rem; display: block"
+            >QR Color</label
+          >
+          <input
+            type="color"
+            id="qr-color"
+            value="#000000"
+            style="
+              width: 60px;
+              height: 40px;
+              padding: 0;
+              border: 1px solid var(--border);
+              border-radius: 4px;
+            "
+          />
+        </div>
+
+        <div class="ad-container">Ad Area</div>
+
+        <div class="qr-preview">
+          <div id="qr-canvas"></div>
+        </div>
+
+        <div class="qr-actions">
+          <button class="btn btn-primary" onclick="downloadQR()">
+            Download PNG
+          </button>
+        </div>
+      </div>
+
+      <script src="/js/qrcode.min.js?v=517b55d3"></script>
+      <script>
+        let currentType = "url";
+        const qrContainer = document.getElementById("qr-canvas");
+        let qrCode = null;
+
+        document.querySelectorAll(".qr-tab").forEach((tab) => {
+          tab.addEventListener("click", () => {
+            document
+              .querySelectorAll(".qr-tab")
+              .forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+            currentType = tab.dataset.type;
+            document
+              .querySelectorAll('[id^="input-"]')
+              .forEach((el) => (el.style.display = "none"));
+            document.getElementById(`input-${currentType}`).style.display =
+              "block";
+            generateQR();
+          });
+        });
+
+        document.querySelectorAll("input, textarea, select").forEach((el) => {
+          el.addEventListener("input", generateQR);
+          el.addEventListener("change", generateQR);
+        });
+
+        function getQRData() {
+          switch (currentType) {
+            case "url":
+              return (
+                document.getElementById("qr-url").value ||
+                "https://tools.pllip.com"
+              );
+            case "text":
+              return document.getElementById("qr-text").value || "Hello World";
+            case "wifi":
+              const ssid = document.getElementById("wifi-ssid").value;
+              const password = document.getElementById("wifi-password").value;
+              const encryption =
+                document.getElementById("wifi-encryption").value;
+              if (!ssid) return "WIFI:S:MyWiFi;T:WPA;P:password;;";
+              if (encryption === "nopass") return `WIFI:S:${ssid};T:nopass;;`;
+              return `WIFI:S:${ssid};T:${encryption};P:${password};;`;
+            case "vcard":
+              const name =
+                document.getElementById("vcard-name").value || "John Doe";
+              const phone = document.getElementById("vcard-phone").value || "";
+              const email = document.getElementById("vcard-email").value || "";
+              const company =
+                document.getElementById("vcard-company").value || "";
+              let vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${name}\n`;
+              if (phone) vcard += `TEL:${phone}\n`;
+              if (email) vcard += `EMAIL:${email}\n`;
+              if (company) vcard += `ORG:${company}\n`;
+              vcard += "END:VCARD";
+              return vcard;
+            default:
+              return "https://example.com";
+          }
+        }
+
+        function generateQR() {
+          const data = getQRData();
+          const size = parseInt(document.getElementById("qr-size").value);
+          const color = document.getElementById("qr-color").value;
+          const errorLevel = document.getElementById("qr-error").value;
+
+          const correctLevels = {
+            L: QRCode.CorrectLevel.L,
+            M: QRCode.CorrectLevel.M,
+            Q: QRCode.CorrectLevel.Q,
+            H: QRCode.CorrectLevel.H,
+          };
+
+          qrContainer.innerHTML = "";
+          qrCode = new QRCode(qrContainer, {
+            text: data,
+            width: size,
+            height: size,
+            colorDark: color,
+            colorLight: "#ffffff",
+            correctLevel: correctLevels[errorLevel],
+          });
+        }
+
+        function downloadQR() {
+          const img = qrContainer.querySelector("img");
+          const canvas = qrContainer.querySelector("canvas");
+          const link = document.createElement("a");
+          link.download = "qrcode.png";
+          if (canvas) {
+            link.href = canvas.toDataURL("image/png");
+          } else if (img) {
+            link.href = img.src;
+          }
+          link.click();
+        }
+
+        generateQR();
+      </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 tools.pllip.com</p>
+        <div class="lang-switcher">
+          <a href="/qr/" class="lang-btn">한국어</a>
+          <a href="/en/qr/" class="lang-btn active">English</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Nav scroll arrows
+        const menu = document.getElementById("nav-menu");
+        const prevBtn = document.querySelector(".nav-prev");
+        const nextBtn = document.querySelector(".nav-next");
+
+        function updateArrows() {
+          const needsScroll = menu.scrollWidth > menu.clientWidth;
+          const atStart = menu.scrollLeft <= 0;
+          const atEnd =
+            menu.scrollLeft >= menu.scrollWidth - menu.clientWidth - 1;
+
+          if (needsScroll) {
+            prevBtn.classList.add("visible");
+            nextBtn.classList.add("visible");
+            prevBtn.classList.toggle("hidden", atStart);
+            nextBtn.classList.toggle("hidden", atEnd);
+          } else {
+            prevBtn.classList.remove("visible");
+            nextBtn.classList.remove("visible");
+          }
+        }
+
+        prevBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: -150, behavior: "smooth" })
+        );
+        nextBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: 150, behavior: "smooth" })
+        );
+        menu.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+
+        // Scroll to active menu item on load
+        const activeItem = menu.querySelector("a.active");
+        if (activeItem) {
+          const li = activeItem.parentElement;
+          const menuRect = menu.getBoundingClientRect();
+          const liRect = li.getBoundingClientRect();
+          const scrollLeft =
+            li.offsetLeft - menuRect.width / 2 + liRect.width / 2;
+          menu.scrollLeft = Math.max(0, scrollLeft);
+        }
+        updateArrows();
+
+        // Header search dropdown
+        const searchBtn = document.getElementById("search-btn");
+        const dropdown = document.getElementById("search-dropdown");
+        const searchInput = document.getElementById("header-search");
+        const results = document.getElementById("search-results");
+        const items = results.querySelectorAll("li");
+
+        searchBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("open");
+          if (dropdown.classList.contains("open")) {
+            searchInput.focus();
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target) && e.target !== searchBtn) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        searchInput.addEventListener("input", () => {
+          const q = searchInput.value.toLowerCase().trim();
+          let visible = 0;
+          items.forEach((li) => {
+            const a = li.querySelector("a");
+            const text = a.textContent.toLowerCase();
+            const keywords = (a.dataset.keywords || "").toLowerCase();
+            const match = !q || text.includes(q) || keywords.includes(q);
+            li.classList.toggle("hidden", !match);
+            if (match) visible++;
+          });
+        });
+
+        // Keyboard shortcut: Cmd/Ctrl + K
+        document.addEventListener("keydown", (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+            e.preventDefault();
+            dropdown.classList.add("open");
+            searchInput.focus();
+          }
+          if (e.key === "Escape") {
+            dropdown.classList.remove("open");
+          }
+        });
+      })();
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"a47e96a534854c899db066813b9421c4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

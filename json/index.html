@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y4NESGBMLL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y4NESGBMLL");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="google-site-verification"
+      content="cDLyhRNtMYZ7c8fZmg7rM7l9lP3wVbbUQ9ttgZvIhUs"
+    />
+    <meta
+      name="naver-site-verification"
+      content="569e4fc689a9e3f30dba5f04416b73c010a6143d"
+    />
+
+    <title>JSON 포매터 - MyTools</title>
+    <meta
+      name="description"
+      content="무료 JSON 포매터. JSON 정렬, 유효성 검증, 압축, 트리 뷰를 제공합니다."
+    />
+    <meta
+      name="keywords"
+      content="JSON 포매터, JSON 정렬, JSON 검증, JSON beautify, JSON minify"
+    />
+
+    <!-- Open Graph / SNS 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JSON 포매터" />
+    <meta
+      property="og:description"
+      content="무료 JSON 포매터. JSON 정렬, 유효성 검증, 압축, 트리 뷰를 제공합니다."
+    />
+    <meta property="og:url" content="https://tools.pllip.com/json/" />
+    <meta property="og:site_name" content="MyTools" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="JSON 포매터" />
+    <meta
+      name="twitter:description"
+      content="무료 JSON 포매터. JSON 정렬, 유효성 검증, 압축, 트리 뷰를 제공합니다."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tools.pllip.com/json/" />
+
+    <!-- Alternate language links -->
+
+    <link rel="alternate" hreflang="ko" href="https://tools.pllip.com/json/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://tools.pllip.com/en/json/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tools.pllip.com/json/"
+    />
+
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tools.pllip.com",
+        "alternateName": "온라인 도구",
+        "url": "https://tools.pllip.com",
+        "description": "온라인 도구 모음. IP 주소 확인, QR 코드 생성, JSON/XML 포매터, Markdown 뷰어, Base64 변환, 정규식 테스터를 제공합니다.",
+        "inLanguage": "ko",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tools.pllip.com/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON 포매터",
+        "description": "JSON 정렬, 검증, 압축을 한 곳에서",
+        "url": "https://tools.pllip.com/json/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "ko",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tools.pllip.com",
+          "url": "https://tools.pllip.com"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css?v=80f21ced" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" class="logo"
+          ><span class="logo-full">tools.pllip.com</span
+          ><span class="logo-short">tools</span></a
+        >
+        <div class="nav-wrapper">
+          <button class="nav-arrow nav-prev" aria-label="이전">&#8249;</button>
+          <ul id="nav-menu">
+            <li><a href="/ip/">IP 확인</a></li>
+
+            <li><a href="/qr/">QR 생성</a></li>
+
+            <li><a href="/json/" class="active">JSON</a></li>
+
+            <li><a href="/xml/">XML</a></li>
+
+            <li><a href="/md/">Markdown</a></li>
+
+            <li><a href="/base64/">Base64</a></li>
+
+            <li><a href="/regex/">정규식</a></li>
+
+            <li><a href="/uuid/">UUID</a></li>
+
+            <li><a href="/hash/">해시</a></li>
+
+            <li><a href="/ladder/">사다리</a></li>
+
+            <li><a href="/kelly/">켈리</a></li>
+
+            <li><a href="/sudoku/">수도쿠</a></li>
+
+            <li><a href="/loan/">대출</a></li>
+          </ul>
+          <button class="nav-arrow nav-next" aria-label="다음">&#8250;</button>
+        </div>
+        <div class="nav-search">
+          <button class="search-btn" id="search-btn" aria-label="검색">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="도구 검색..."
+              autocomplete="off"
+            />
+            <ul id="search-results">
+              <li>
+                <a
+                  href="/ip/"
+                  data-keywords="ip address 아이피 주소 ipv4 ipv6 내아이피 myip whatismyip 위치 location IP 주소 확인 IP 확인"
+                  >🌐 IP 주소 확인</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/qr/"
+                  data-keywords="qr code 큐알 qr코드 barcode 바코드 wifi 와이파이 vcard 명함 QR 코드 생성 QR 생성"
+                  >📱 QR 코드 생성</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/json/"
+                  data-keywords="json formatter beautify beautifier minify 제이슨 포맷 정렬 압축 validate 검증 parser JSON 포매터 JSON"
+                  >{ } JSON 포매터</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/xml/"
+                  data-keywords="xml formatter beautify 포맷 정렬 html xhtml convert 변환 XML 포매터 XML"
+                  >&lt;/&gt; XML 포매터</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/md/"
+                  data-keywords="markdown 마크다운 md preview 미리보기 editor 에디터 github readme Markdown 뷰어 Markdown"
+                  >M↓ Markdown 뷰어</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/base64/"
+                  data-keywords="base64 encode decode 인코딩 디코딩 인코더 디코더 encoder decoder 변환 Base64 변환 Base64"
+                  >B64 Base64 변환</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/regex/"
+                  data-keywords="regex regexp 정규식 정규표현식 regular expression pattern 패턴 test tester 테스트 정규식 테스터 정규식"
+                  >.* 정규식 테스터</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/uuid/"
+                  data-keywords="uuid guid 고유식별자 unique id generator 생성기 랜덤 UUID 생성기 UUID"
+                  ># UUID 생성기</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/hash/"
+                  data-keywords="hash 해시 md5 sha1 sha256 sha512 checksum 체크섬 암호화 해시 생성기 해시"
+                  >## 해시 생성기</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/ladder/"
+                  data-keywords="ladder game 사다리 사다리게임 사다리타기 추첨 제비뽑기 랜덤 순서정하기 사다리 게임 사다리"
+                  >🪜 사다리 게임</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/kelly/"
+                  data-keywords="kelly criterion 켈리 기준 베팅 투자 비율 자금관리 bankroll 확률 배당률 켈리 기준 계산기 켈리"
+                  >📊 켈리 기준 계산기</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/sudoku/"
+                  data-keywords="sudoku 수도쿠 스도쿠 퍼즐 puzzle 숫자게임 두뇌게임 브레인게임 논리 풀이 힌트 solver 수도쿠 수도쿠"
+                  >9 수도쿠</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/loan/"
+                  data-keywords="대출 계산기 loan calculator 상환 원리금균등 원금균등 이자 mortgage 주택담보대출 신용대출 학자금 대출 상환 계산기 대출"
+                  >💰 대출 상환 계산기</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <style>
+        .formatter-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+          .formatter-container {
+            grid-template-columns: 1fr;
+          }
+        }
+        .editor-box {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+        .editor-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          background: var(--bg);
+          border-bottom: 1px solid var(--border);
+        }
+        .editor-header h3 {
+          font-size: 0.875rem;
+          font-weight: 600;
+        }
+        .editor-actions {
+          display: flex;
+          gap: 0.5rem;
+        }
+        .editor-actions button {
+          padding: 0.35rem 0.75rem;
+          font-size: 0.75rem;
+          border: 1px solid var(--border);
+          background: var(--card-bg);
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        .editor-actions button:hover {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+        .editor-textarea {
+          width: 100%;
+          min-height: 400px;
+          padding: 1rem;
+          border: none;
+          resize: vertical;
+          font-family: "SF Mono", Monaco, monospace;
+          font-size: 0.875rem;
+          line-height: 1.5;
+          background: var(--card-bg);
+        }
+        .editor-textarea:focus {
+          outline: none;
+        }
+        .status-bar {
+          padding: 0.5rem 1rem;
+          background: var(--bg);
+          border-top: 1px solid var(--border);
+          font-size: 0.75rem;
+          display: flex;
+          justify-content: space-between;
+        }
+        .status-valid {
+          color: var(--success);
+        }
+        .status-invalid {
+          color: var(--error);
+        }
+        .toolbar {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          margin-bottom: 1rem;
+        }
+        .toolbar button {
+          padding: 0.5rem 1rem;
+          border: 1px solid var(--border);
+          background: var(--card-bg);
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.875rem;
+        }
+        .toolbar button:hover {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+        .indent-select {
+          padding: 0.5rem;
+          border: 1px solid var(--border);
+          border-radius: 6px;
+          font-size: 0.875rem;
+        }
+      </style>
+
+      <div class="toolbar">
+        <button onclick="formatJSON()">정렬 (Beautify)</button>
+        <button onclick="minifyJSON()">압축 (Minify)</button>
+        <button onclick="validateJSON()">검증</button>
+        <button onclick="copyOutput()">복사</button>
+        <button onclick="clearAll()">초기화</button>
+        <select class="indent-select" id="indent-size">
+          <option value="2">2 spaces</option>
+          <option value="4">4 spaces</option>
+          <option value="tab">Tab</option>
+        </select>
+      </div>
+
+      <div class="ad-container">광고 영역</div>
+
+      <div class="formatter-container">
+        <div class="editor-box">
+          <div class="editor-header">
+            <h3>입력 (Input)</h3>
+            <div class="editor-actions">
+              <button onclick="loadSample()">샘플</button>
+              <button onclick="document.getElementById('input').value=''">
+                지우기
+              </button>
+            </div>
+          </div>
+          <textarea
+            id="input"
+            class="editor-textarea"
+            placeholder='{"name": "John", "age": 30}'
+            spellcheck="false"
+          ></textarea>
+          <div class="status-bar">
+            <span id="input-status">입력을 기다리는 중...</span>
+            <span id="input-size">0 bytes</span>
+          </div>
+        </div>
+
+        <div class="editor-box">
+          <div class="editor-header">
+            <h3>출력 (Output)</h3>
+            <div class="editor-actions">
+              <button onclick="copyOutput()">복사</button>
+              <button onclick="downloadOutput()">다운로드</button>
+            </div>
+          </div>
+          <textarea
+            id="output"
+            class="editor-textarea"
+            placeholder=""
+            readonly
+            spellcheck="false"
+          ></textarea>
+          <div class="status-bar">
+            <span id="output-status">-</span>
+            <span id="output-size">0 bytes</span>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const T = {
+          waiting: "입력을 기다리는 중...",
+          validJson: "유효한 JSON",
+          invalidJson: "유효하지 않은 JSON",
+          validJsonMsg: "유효한 JSON입니다",
+          formatDone: "정렬 완료",
+          minifyDone: "압축 완료",
+          validatePass: "검증 통과",
+          validateFail: "검증 실패",
+          copied: "클립보드에 복사됨!",
+          error: "오류",
+        };
+
+        const inputEl = document.getElementById("input");
+        const outputEl = document.getElementById("output");
+
+        inputEl.addEventListener("input", () => {
+          updateInputSize();
+          autoValidate();
+        });
+
+        function getIndent() {
+          const val = document.getElementById("indent-size").value;
+          return val === "tab" ? "\t" : parseInt(val);
+        }
+
+        function formatJSON() {
+          try {
+            const parsed = JSON.parse(inputEl.value);
+            outputEl.value = JSON.stringify(parsed, null, getIndent());
+            updateStatus("output-status", T.formatDone, true);
+            updateOutputSize();
+          } catch (e) {
+            outputEl.value = "";
+            updateStatus("output-status", `${T.error}: ${e.message}`, false);
+          }
+        }
+
+        function minifyJSON() {
+          try {
+            const parsed = JSON.parse(inputEl.value);
+            outputEl.value = JSON.stringify(parsed);
+            updateStatus("output-status", T.minifyDone, true);
+            updateOutputSize();
+          } catch (e) {
+            outputEl.value = "";
+            updateStatus("output-status", `${T.error}: ${e.message}`, false);
+          }
+        }
+
+        function validateJSON() {
+          try {
+            JSON.parse(inputEl.value);
+            updateStatus("input-status", T.validJsonMsg, true);
+            updateStatus("output-status", T.validatePass, true);
+          } catch (e) {
+            updateStatus("input-status", `${T.error}: ${e.message}`, false);
+            updateStatus("output-status", T.validateFail, false);
+          }
+        }
+
+        function autoValidate() {
+          if (!inputEl.value.trim()) {
+            updateStatus("input-status", T.waiting, null);
+            return;
+          }
+          try {
+            JSON.parse(inputEl.value);
+            updateStatus("input-status", T.validJson, true);
+          } catch (e) {
+            updateStatus("input-status", T.invalidJson, false);
+          }
+        }
+
+        function updateStatus(id, message, isValid) {
+          const el = document.getElementById(id);
+          el.textContent = message;
+          el.className =
+            isValid === true
+              ? "status-valid"
+              : isValid === false
+              ? "status-invalid"
+              : "";
+        }
+
+        function updateInputSize() {
+          document.getElementById("input-size").textContent = formatBytes(
+            new Blob([inputEl.value]).size
+          );
+        }
+
+        function updateOutputSize() {
+          document.getElementById("output-size").textContent = formatBytes(
+            new Blob([outputEl.value]).size
+          );
+        }
+
+        function formatBytes(bytes) {
+          if (bytes === 0) return "0 bytes";
+          if (bytes < 1024) return bytes + " bytes";
+          return (bytes / 1024).toFixed(2) + " KB";
+        }
+
+        function copyOutput() {
+          navigator.clipboard.writeText(outputEl.value).then(() => {
+            updateStatus("output-status", T.copied, true);
+            setTimeout(() => updateStatus("output-status", "-", null), 2000);
+          });
+        }
+
+        function downloadOutput() {
+          const blob = new Blob([outputEl.value], { type: "application/json" });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = "formatted.json";
+          a.click();
+        }
+
+        function clearAll() {
+          inputEl.value = "";
+          outputEl.value = "";
+          updateStatus("input-status", T.waiting, null);
+          updateStatus("output-status", "-", null);
+          updateInputSize();
+          updateOutputSize();
+        }
+
+        function loadSample() {
+          const sample = {
+            name: "John Doe",
+            age: 30,
+            email: "john@example.com",
+            address: { city: "Seoul", district: "Gangnam" },
+            hobbies: ["reading", "hiking", "coding"],
+            married: false,
+          };
+          inputEl.value = JSON.stringify(sample);
+          updateInputSize();
+          autoValidate();
+        }
+      </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 tools.pllip.com</p>
+        <div class="lang-switcher">
+          <a href="/json/" class="lang-btn active">한국어</a>
+          <a href="/en/json/" class="lang-btn">English</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Nav scroll arrows
+        const menu = document.getElementById("nav-menu");
+        const prevBtn = document.querySelector(".nav-prev");
+        const nextBtn = document.querySelector(".nav-next");
+
+        function updateArrows() {
+          const needsScroll = menu.scrollWidth > menu.clientWidth;
+          const atStart = menu.scrollLeft <= 0;
+          const atEnd =
+            menu.scrollLeft >= menu.scrollWidth - menu.clientWidth - 1;
+
+          if (needsScroll) {
+            prevBtn.classList.add("visible");
+            nextBtn.classList.add("visible");
+            prevBtn.classList.toggle("hidden", atStart);
+            nextBtn.classList.toggle("hidden", atEnd);
+          } else {
+            prevBtn.classList.remove("visible");
+            nextBtn.classList.remove("visible");
+          }
+        }
+
+        prevBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: -150, behavior: "smooth" })
+        );
+        nextBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: 150, behavior: "smooth" })
+        );
+        menu.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+
+        // Scroll to active menu item on load
+        const activeItem = menu.querySelector("a.active");
+        if (activeItem) {
+          const li = activeItem.parentElement;
+          const menuRect = menu.getBoundingClientRect();
+          const liRect = li.getBoundingClientRect();
+          const scrollLeft =
+            li.offsetLeft - menuRect.width / 2 + liRect.width / 2;
+          menu.scrollLeft = Math.max(0, scrollLeft);
+        }
+        updateArrows();
+
+        // Header search dropdown
+        const searchBtn = document.getElementById("search-btn");
+        const dropdown = document.getElementById("search-dropdown");
+        const searchInput = document.getElementById("header-search");
+        const results = document.getElementById("search-results");
+        const items = results.querySelectorAll("li");
+
+        searchBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("open");
+          if (dropdown.classList.contains("open")) {
+            searchInput.focus();
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target) && e.target !== searchBtn) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        searchInput.addEventListener("input", () => {
+          const q = searchInput.value.toLowerCase().trim();
+          let visible = 0;
+          items.forEach((li) => {
+            const a = li.querySelector("a");
+            const text = a.textContent.toLowerCase();
+            const keywords = (a.dataset.keywords || "").toLowerCase();
+            const match = !q || text.includes(q) || keywords.includes(q);
+            li.classList.toggle("hidden", !match);
+            if (match) visible++;
+          });
+        });
+
+        // Keyboard shortcut: Cmd/Ctrl + K
+        document.addEventListener("keydown", (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+            e.preventDefault();
+            dropdown.classList.add("open");
+            searchInput.focus();
+          }
+          if (e.key === "Escape") {
+            dropdown.classList.remove("open");
+          }
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9b557d8e1c03aff4',t:'MTc2Njk3MTM4OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"a47e96a534854c899db066813b9421c4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

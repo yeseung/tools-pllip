@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y4NESGBMLL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y4NESGBMLL");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ladder Game - MyTools</title>
+    <meta
+      name="description"
+      content="Free ladder game. Random selection for order or winners using ladder climbing."
+    />
+    <meta
+      name="keywords"
+      content="ladder game, random picker, lottery, random selection, drawing lots"
+    />
+
+    <!-- Open Graph / SNS 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ladder Game" />
+    <meta
+      property="og:description"
+      content="Free ladder game. Random selection for order or winners using ladder climbing."
+    />
+    <meta property="og:url" content="https://tools.pllip.com/en/ladder/" />
+    <meta property="og:site_name" content="MyTools" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ladder Game" />
+    <meta
+      name="twitter:description"
+      content="Free ladder game. Random selection for order or winners using ladder climbing."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tools.pllip.com/en/ladder/" />
+
+    <!-- Alternate language links -->
+
+    <link
+      rel="alternate"
+      hreflang="ko"
+      href="https://tools.pllip.com/ladder/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://tools.pllip.com/en/ladder/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tools.pllip.com/ladder/"
+    />
+
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tools.pllip.com",
+        "alternateName": "Online Tools",
+        "url": "https://tools.pllip.com/en/",
+        "description": "Free online tools collection. IP address lookup, QR code generator, JSON/XML formatter, Markdown viewer, Base64 converter, and regex tester.",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tools.pllip.com/en/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Ladder Game",
+        "description": "Fair random selection with ladder game",
+        "url": "https://tools.pllip.com/en/ladder/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tools.pllip.com",
+          "url": "https://tools.pllip.com"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css?v=80f21ced" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/en/" class="logo"
+          ><span class="logo-full">tools.pllip.com</span
+          ><span class="logo-short">tools</span></a
+        >
+        <div class="nav-wrapper">
+          <button class="nav-arrow nav-prev" aria-label="Previous">
+            &#8249;
+          </button>
+          <ul id="nav-menu">
+            <li><a href="/en/ip/">IP Check</a></li>
+
+            <li><a href="/en/qr/">QR Code</a></li>
+
+            <li><a href="/en/json/">JSON</a></li>
+
+            <li><a href="/en/xml/">XML</a></li>
+
+            <li><a href="/en/md/">Markdown</a></li>
+
+            <li><a href="/en/base64/">Base64</a></li>
+
+            <li><a href="/en/regex/">Regex</a></li>
+
+            <li><a href="/en/uuid/">UUID</a></li>
+
+            <li><a href="/en/hash/">Hash</a></li>
+
+            <li><a href="/en/ladder/" class="active">Ladder</a></li>
+
+            <li><a href="/en/kelly/">Kelly</a></li>
+
+            <li><a href="/en/sudoku/">Sudoku</a></li>
+
+            <li><a href="/en/loan/">Loan</a></li>
+          </ul>
+          <button class="nav-arrow nav-next" aria-label="Next">&#8250;</button>
+        </div>
+        <div class="nav-search">
+          <button class="search-btn" id="search-btn" aria-label="Search">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Search tools..."
+              autocomplete="off"
+            />
+            <ul id="search-results">
+              <li>
+                <a
+                  href="/en/ip/"
+                  data-keywords="ip address ipv4 ipv6 myip whatismyip location lookup IP Address Lookup IP Check"
+                  >🌐 IP Address Lookup</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/qr/"
+                  data-keywords="qr code barcode wifi vcard generator create QR Code Generator QR Code"
+                  >📱 QR Code Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/json/"
+                  data-keywords="json formatter beautify minify validate parser JSON Formatter JSON"
+                  >{ } JSON Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/xml/"
+                  data-keywords="xml formatter beautify html xhtml convert json XML Formatter XML"
+                  >&lt;/&gt; XML Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/md/"
+                  data-keywords="markdown md preview editor github readme Markdown Viewer Markdown"
+                  >M↓ Markdown Viewer</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/base64/"
+                  data-keywords="base64 encode decode encoder decoder converter Base64 Converter Base64"
+                  >B64 Base64 Converter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/regex/"
+                  data-keywords="regex regexp regular expression pattern tester Regex Tester Regex"
+                  >.* Regex Tester</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/uuid/"
+                  data-keywords="uuid guid unique id generator random UUID Generator UUID"
+                  ># UUID Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/hash/"
+                  data-keywords="hash md5 sha1 sha256 sha512 checksum generator Hash Generator Hash"
+                  >## Hash Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/ladder/"
+                  data-keywords="ladder game random picker lottery selection Ladder Game Ladder"
+                  >🪜 Ladder Game</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/kelly/"
+                  data-keywords="kelly criterion betting investment ratio bankroll odds Kelly Criterion Calculator Kelly"
+                  >📊 Kelly Criterion Calculator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/sudoku/"
+                  data-keywords="sudoku puzzle number game brain logic solver hints Sudoku Sudoku"
+                  >9 Sudoku</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/loan/"
+                  data-keywords="loan calculator repayment mortgage amortization interest rate debt payoff strategy Loan Repayment Calculator Loan"
+                  >💰 Loan Repayment Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="ladder-container">
+        <div class="ladder-settings">
+          <div class="ladder-input-group">
+            <label>Participants (2-10)</label>
+            <div id="players-list">
+              <div class="player-row">
+                <input
+                  type="text"
+                  class="player-input"
+                  placeholder="Player 1"
+                  value="Player 1"
+                />
+                <button
+                  class="remove-btn"
+                  onclick="removePlayer(this)"
+                  title="Delete"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="player-row">
+                <input
+                  type="text"
+                  class="player-input"
+                  placeholder="Player 2"
+                  value="Player 2"
+                />
+                <button
+                  class="remove-btn"
+                  onclick="removePlayer(this)"
+                  title="Delete"
+                >
+                  &times;
+                </button>
+              </div>
+            </div>
+            <button class="add-btn" onclick="addPlayer()">
+              + Add Participant
+            </button>
+          </div>
+
+          <div class="ladder-input-group">
+            <label>Results</label>
+            <div id="results-list">
+              <div class="result-row">
+                <input
+                  type="text"
+                  class="result-input"
+                  placeholder="Result 1"
+                  value="Win"
+                />
+              </div>
+              <div class="result-row">
+                <input
+                  type="text"
+                  class="result-input"
+                  placeholder="Result 2"
+                  value="Lose"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ladder-options">
+          <label class="rolling-option">
+            <input type="checkbox" id="rolling-check" checked /> Rolling
+            (First↔Last connected)
+          </label>
+        </div>
+
+        <div class="ladder-actions">
+          <button
+            class="btn btn-primary"
+            id="main-btn"
+            onclick="handleMainButton()"
+          >
+            Prepare
+          </button>
+          <button class="btn btn-secondary" onclick="resetLadder()">
+            Reset
+          </button>
+        </div>
+
+        <div class="ladder-board" id="ladder-board">
+          <canvas id="ladder-canvas"></canvas>
+        </div>
+
+        <div class="ladder-result-box" id="result-box">
+          <h3>Result</h3>
+          <div id="result-content"></div>
+        </div>
+      </div>
+
+      <style>
+        .ladder-container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .ladder-settings {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+          .ladder-settings {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .ladder-input-group {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+        }
+
+        .ladder-input-group label {
+          display: block;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .player-row,
+        .result-row {
+          display: flex;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .player-input,
+        .result-input {
+          flex: 1;
+          padding: 0.6rem 0.8rem;
+          border: 1px solid var(--border);
+          border-radius: 6px;
+          font-size: 0.95rem;
+        }
+
+        .player-input:focus,
+        .result-input:focus {
+          outline: none;
+          border-color: var(--primary);
+        }
+
+        .remove-btn {
+          width: 36px;
+          height: 36px;
+          border: 1px solid var(--border);
+          background: var(--card-bg);
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 1.25rem;
+          color: var(--text-muted);
+          transition: all 0.2s;
+        }
+
+        .remove-btn:hover {
+          background: var(--error);
+          color: white;
+          border-color: var(--error);
+        }
+
+        .add-btn {
+          width: 100%;
+          padding: 0.6rem;
+          margin-top: 0.5rem;
+          border: 1px dashed var(--border);
+          background: transparent;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.9rem;
+          color: var(--text-muted);
+          transition: all 0.2s;
+        }
+
+        .add-btn:hover {
+          border-color: var(--primary);
+          color: var(--primary);
+        }
+
+        .ladder-options {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1rem;
+        }
+
+        .rolling-option {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.9rem;
+          cursor: pointer;
+          user-select: none;
+        }
+
+        .rolling-option input[type="checkbox"] {
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+        }
+
+        .ladder-actions {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+        }
+
+        .ladder-board {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+          position: relative;
+          min-height: 400px;
+          display: none;
+          overflow-x: auto;
+        }
+
+        .ladder-board.active {
+          display: block;
+        }
+
+        #ladder-canvas {
+          display: block;
+          cursor: pointer;
+          user-select: none;
+          -webkit-user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          outline: none;
+        }
+
+        .ladder-result-box {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-top: 1.5rem;
+          display: none;
+        }
+
+        .ladder-result-box.active {
+          display: block;
+        }
+
+        .ladder-result-box h3 {
+          margin-bottom: 1rem;
+          color: var(--primary);
+          text-align: center;
+        }
+
+        #result-content {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .result-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          background: var(--bg);
+          border-radius: 8px;
+        }
+
+        .result-item .player-name {
+          font-weight: 600;
+          color: var(--primary);
+        }
+
+        .result-item .result-name {
+          font-weight: 600;
+          color: var(--text-muted);
+        }
+
+        .result-item .result-name.revealed {
+          color: var(--success);
+        }
+      </style>
+
+      <script>
+        (function () {
+          const T = {
+            prepare: "Prepare",
+            generate: "Generate",
+            participantPlaceholder: "Player",
+            resultPlaceholder: "Result",
+            maxPlayers: "Maximum 10 players allowed.",
+            minPlayers: "Minimum 2 players required.",
+          };
+
+          const MAX_PLAYERS = 10;
+          const MIN_PLAYERS = 2;
+
+          let gameState = "idle";
+          let animationId = null;
+
+          let ladderData = {
+            players: [],
+            results: [],
+            bridges: [],
+            rollingBridges: [],
+            paths: [],
+            revealed: [],
+            isRolling: false,
+          };
+
+          window.handleMainButton = function () {
+            if (gameState === "idle") {
+              prepareGame();
+            } else if (gameState === "ready") {
+              generateBridges();
+            }
+          };
+
+          function updateMainButton() {
+            const btn = document.getElementById("main-btn");
+            if (gameState === "idle") {
+              btn.textContent = T.prepare;
+            } else if (gameState === "ready") {
+              btn.textContent = T.generate;
+            } else {
+              btn.textContent = T.prepare;
+            }
+          }
+
+          function setInputsDisabled(disabled) {
+            document
+              .querySelectorAll(".player-input, .result-input")
+              .forEach((input) => {
+                input.disabled = disabled;
+              });
+            document
+              .querySelectorAll(".remove-btn, .add-btn")
+              .forEach((btn) => {
+                btn.disabled = disabled;
+                btn.style.opacity = disabled ? "0.5" : "1";
+                btn.style.pointerEvents = disabled ? "none" : "auto";
+              });
+            const rollingCheck = document.getElementById("rolling-check");
+            rollingCheck.disabled = disabled;
+            rollingCheck.parentElement.style.opacity = disabled ? "0.5" : "1";
+          }
+
+          function prepareGame() {
+            const playerInputs = document.querySelectorAll(".player-input");
+            const resultInputs = document.querySelectorAll(".result-input");
+
+            ladderData.players = Array.from(playerInputs).map(
+              (input, i) =>
+                input.value || T.participantPlaceholder + " " + (i + 1)
+            );
+            ladderData.results = Array.from(resultInputs).map(
+              (input, i) => input.value || T.resultPlaceholder + " " + (i + 1)
+            );
+            ladderData.isRolling =
+              document.getElementById("rolling-check").checked;
+
+            ladderData.bridges = [];
+            ladderData.rollingBridges = [];
+            ladderData.paths = [];
+
+            gameState = "ready";
+            updateMainButton();
+            setInputsDisabled(true);
+
+            document.getElementById("ladder-board").classList.add("active");
+            document.getElementById("result-box").classList.remove("active");
+
+            requestAnimationFrame(() => {
+              drawLadder(false);
+            });
+          }
+
+          function generateBridges() {
+            const numPlayers = ladderData.players.length;
+            const numRows = 8;
+            ladderData.bridges = [];
+            ladderData.rollingBridges = [];
+            ladderData.revealed = new Array(numPlayers).fill(false);
+
+            for (let row = 0; row < numRows; row++) {
+              const rowBridges = [];
+              for (let col = 0; col < numPlayers - 1; col++) {
+                const prevHasBridge = col > 0 && rowBridges[col - 1];
+                rowBridges.push(!prevHasBridge && Math.random() > 0.5);
+              }
+              ladderData.bridges.push(rowBridges);
+            }
+
+            if (ladderData.isRolling) {
+              for (let row = 0; row < numRows; row++) {
+                const firstHasBridge = ladderData.bridges[row][0];
+                const lastHasBridge = ladderData.bridges[row][numPlayers - 2];
+                ladderData.rollingBridges.push(
+                  !firstHasBridge && !lastHasBridge && Math.random() > 0.5
+                );
+              }
+            }
+
+            for (let col = 0; col < numPlayers - 1; col++) {
+              let hasBridge = ladderData.bridges.some((row) => row[col]);
+              if (!hasBridge) {
+                const availableRows = [];
+                for (let row = 0; row < numRows; row++) {
+                  const leftOk = col === 0 || !ladderData.bridges[row][col - 1];
+                  const rightOk =
+                    col === numPlayers - 2 || !ladderData.bridges[row][col + 1];
+                  const rollingOk =
+                    !ladderData.isRolling ||
+                    !ladderData.rollingBridges[row] ||
+                    (col !== 0 && col !== numPlayers - 2);
+                  if (leftOk && rightOk && rollingOk) {
+                    availableRows.push(row);
+                  }
+                }
+                if (availableRows.length > 0) {
+                  const randomRow =
+                    availableRows[
+                      Math.floor(Math.random() * availableRows.length)
+                    ];
+                  ladderData.bridges[randomRow][col] = true;
+                } else {
+                  const randomRow = Math.floor(Math.random() * numRows);
+                  ladderData.bridges[randomRow][col] = true;
+                }
+              }
+            }
+
+            if (ladderData.isRolling) {
+              const hasRollingBridge = ladderData.rollingBridges.some((b) => b);
+              if (!hasRollingBridge) {
+                const availableRows = [];
+                for (let row = 0; row < numRows; row++) {
+                  const firstHasBridge = ladderData.bridges[row][0];
+                  const lastHasBridge =
+                    numPlayers > 2
+                      ? ladderData.bridges[row][numPlayers - 2]
+                      : false;
+                  if (!firstHasBridge && !lastHasBridge) {
+                    availableRows.push(row);
+                  }
+                }
+                if (availableRows.length > 0) {
+                  const randomRow =
+                    availableRows[
+                      Math.floor(Math.random() * availableRows.length)
+                    ];
+                  ladderData.rollingBridges[randomRow] = true;
+                } else {
+                  const randomRow = Math.floor(Math.random() * numRows);
+                  ladderData.rollingBridges[randomRow] = true;
+                }
+              }
+            }
+
+            ladderData.paths = [];
+            for (let i = 0; i < numPlayers; i++) {
+              ladderData.paths.push(calculatePath(i));
+            }
+
+            gameState = "playing";
+            drawLadder(true);
+            initResultBox();
+          }
+
+          window.addPlayer = function () {
+            const list = document.getElementById("players-list");
+            const count = list.children.length;
+            if (count >= MAX_PLAYERS) {
+              alert(T.maxPlayers);
+              return;
+            }
+            const row = document.createElement("div");
+            row.className = "player-row";
+            row.innerHTML =
+              '<input type="text" class="player-input" placeholder="' +
+              T.participantPlaceholder +
+              " " +
+              (count + 1) +
+              '" value="' +
+              T.participantPlaceholder +
+              " " +
+              (count + 1) +
+              '"><button class="remove-btn" onclick="removePlayer(this)" title="Delete">&times;</button>';
+            list.appendChild(row);
+            syncResults();
+          };
+
+          window.removePlayer = function (btn) {
+            const list = document.getElementById("players-list");
+            if (list.children.length <= MIN_PLAYERS) {
+              alert(T.minPlayers);
+              return;
+            }
+            btn.parentElement.remove();
+            syncResults();
+          };
+
+          function syncResults() {
+            const playerCount =
+              document.getElementById("players-list").children.length;
+            const resultsList = document.getElementById("results-list");
+
+            while (resultsList.children.length < playerCount) {
+              const count = resultsList.children.length;
+              const row = document.createElement("div");
+              row.className = "result-row";
+              row.innerHTML =
+                '<input type="text" class="result-input" placeholder="' +
+                T.resultPlaceholder +
+                " " +
+                (count + 1) +
+                '" value="' +
+                T.resultPlaceholder +
+                " " +
+                (count + 1) +
+                '">';
+              resultsList.appendChild(row);
+            }
+
+            while (resultsList.children.length > playerCount) {
+              resultsList.lastChild.remove();
+            }
+          }
+
+          function calculatePath(startCol) {
+            const path = [];
+            let col = startCol;
+            const numRows = ladderData.bridges.length;
+            const numPlayers = ladderData.players.length;
+
+            path.push({ col, y: 0 });
+
+            for (let row = 0; row < numRows; row++) {
+              const bridgeY = (row + 1) / (numRows + 1);
+              path.push({ col, y: bridgeY });
+
+              if (col > 0 && ladderData.bridges[row][col - 1]) {
+                col--;
+                path.push({ col, y: bridgeY });
+              } else if (col < numPlayers - 1 && ladderData.bridges[row][col]) {
+                col++;
+                path.push({ col, y: bridgeY });
+              } else if (
+                ladderData.isRolling &&
+                ladderData.rollingBridges[row]
+              ) {
+                if (col === 0) {
+                  path.push({ col: -0.5, y: bridgeY, rolling: "left" });
+                  path.push({
+                    col: numPlayers - 0.5,
+                    y: bridgeY,
+                    rolling: "right",
+                  });
+                  col = numPlayers - 1;
+                  path.push({ col, y: bridgeY });
+                } else if (col === numPlayers - 1) {
+                  path.push({
+                    col: numPlayers - 0.5,
+                    y: bridgeY,
+                    rolling: "right",
+                  });
+                  path.push({ col: -0.5, y: bridgeY, rolling: "left" });
+                  col = 0;
+                  path.push({ col, y: bridgeY });
+                }
+              }
+            }
+
+            path.push({ col, y: 1 });
+            return { path, endCol: col };
+          }
+
+          function drawLadder(showBridges, selectedPlayer, highlightedResult) {
+            selectedPlayer = selectedPlayer || -1;
+            highlightedResult = highlightedResult || -1;
+
+            const canvas = document.getElementById("ladder-canvas");
+            const ctx = canvas.getContext("2d");
+
+            const numPlayers = ladderData.players.length;
+            const padding = 50;
+            const colWidth = 80;
+            const numRows = 8;
+            const topMargin = 40;
+            const bottomMargin = 40;
+            const ladderHeight = 300;
+
+            const requiredWidth = padding * 2 + colWidth * (numPlayers - 1);
+            const totalHeight = topMargin + ladderHeight + bottomMargin;
+
+            canvas.style.width = requiredWidth + "px";
+            canvas.style.height = totalHeight + "px";
+
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = requiredWidth * dpr;
+            canvas.height = totalHeight * dpr;
+            ctx.scale(dpr, dpr);
+
+            const rowHeight = (ladderHeight - 20) / (numRows + 1);
+
+            ctx.clearRect(0, 0, requiredWidth, totalHeight);
+
+            ctx.font =
+              "bold 14px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+
+            for (let i = 0; i < numPlayers; i++) {
+              const x = padding + i * colWidth;
+              const name = ladderData.players[i];
+              const isSelected = i === selectedPlayer;
+
+              const textWidth = Math.max(ctx.measureText(name).width + 16, 50);
+              ctx.fillStyle = isSelected ? "#f59e0b" : "#2563eb";
+              ctx.beginPath();
+              ctx.roundRect(x - textWidth / 2, 8, textWidth, 26, 6);
+              ctx.fill();
+
+              ctx.fillStyle = "white";
+              ctx.fillText(name, x, 21);
+            }
+
+            ctx.strokeStyle = "#cbd5e1";
+            ctx.lineWidth = 3;
+
+            for (let i = 0; i < numPlayers; i++) {
+              const x = padding + i * colWidth;
+              ctx.beginPath();
+              ctx.moveTo(x, topMargin);
+              ctx.lineTo(x, topMargin + ladderHeight);
+              ctx.stroke();
+            }
+
+            if (showBridges && ladderData.bridges.length > 0) {
+              ctx.strokeStyle = "#cbd5e1";
+              ctx.lineWidth = 3;
+
+              for (let row = 0; row < ladderData.bridges.length; row++) {
+                const y = topMargin + 10 + (row + 1) * rowHeight;
+                for (let col = 0; col < ladderData.bridges[row].length; col++) {
+                  if (ladderData.bridges[row][col]) {
+                    const x1 = padding + col * colWidth;
+                    const x2 = padding + (col + 1) * colWidth;
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y);
+                    ctx.lineTo(x2, y);
+                    ctx.stroke();
+                  }
+                }
+              }
+
+              if (
+                ladderData.isRolling &&
+                ladderData.rollingBridges.length > 0
+              ) {
+                ctx.strokeStyle = "#94a3b8";
+                ctx.lineWidth = 3;
+                ctx.setLineDash([5, 5]);
+
+                for (
+                  let row = 0;
+                  row < ladderData.rollingBridges.length;
+                  row++
+                ) {
+                  if (ladderData.rollingBridges[row]) {
+                    const y = topMargin + 10 + (row + 1) * rowHeight;
+                    const firstX = padding;
+                    const lastX = padding + (numPlayers - 1) * colWidth;
+                    const curveHeight = 15;
+
+                    ctx.beginPath();
+                    ctx.moveTo(firstX, y);
+                    ctx.quadraticCurveTo(
+                      firstX - 25,
+                      y - curveHeight,
+                      firstX - 30,
+                      y - curveHeight
+                    );
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.moveTo(lastX, y);
+                    ctx.quadraticCurveTo(
+                      lastX + 25,
+                      y - curveHeight,
+                      lastX + 30,
+                      y - curveHeight
+                    );
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.moveTo(firstX - 30, y - curveHeight);
+                    ctx.lineTo(firstX - 30, y - curveHeight - 8);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(lastX + 30, y - curveHeight);
+                    ctx.lineTo(lastX + 30, y - curveHeight - 8);
+                    ctx.stroke();
+                  }
+                }
+                ctx.setLineDash([]);
+              }
+            }
+
+            ctx.font =
+              "bold 14px -apple-system, BlinkMacSystemFont, sans-serif";
+
+            for (let i = 0; i < ladderData.results.length; i++) {
+              const x = padding + i * colWidth;
+              const result = ladderData.results[i];
+              const isHighlighted = i === highlightedResult;
+
+              const textWidth = Math.max(
+                ctx.measureText(result).width + 16,
+                50
+              );
+              ctx.fillStyle = isHighlighted ? "#22c55e" : "#f1f5f9";
+              ctx.strokeStyle = isHighlighted ? "#22c55e" : "#e2e8f0";
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.roundRect(
+                x - textWidth / 2,
+                topMargin + ladderHeight + 8,
+                textWidth,
+                26,
+                6
+              );
+              ctx.fill();
+              ctx.stroke();
+
+              ctx.fillStyle = isHighlighted ? "white" : "#1e293b";
+              ctx.fillText(result, x, topMargin + ladderHeight + 21);
+            }
+
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+            ladderData.geometry = {
+              padding,
+              colWidth,
+              rowHeight,
+              width: requiredWidth,
+              height: totalHeight,
+              topMargin,
+              ladderHeight,
+              dpr,
+            };
+          }
+
+          function setupCanvasClick() {
+            const canvas = document.getElementById("ladder-canvas");
+            canvas.addEventListener("click", handleCanvasClick);
+          }
+
+          function handleCanvasClick(e) {
+            if (gameState !== "playing") return;
+            if (!ladderData.geometry) return;
+
+            const canvas = document.getElementById("ladder-canvas");
+            const rect = canvas.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const { padding, colWidth } = ladderData.geometry;
+
+            if (y >= 5 && y <= 38) {
+              for (let i = 0; i < ladderData.players.length; i++) {
+                const playerX = padding + i * colWidth;
+                if (Math.abs(x - playerX) < 35) {
+                  animatePath(i);
+                  return;
+                }
+              }
+            }
+          }
+
+          document.addEventListener("DOMContentLoaded", setupCanvasClick);
+
+          function animatePath(playerIndex) {
+            if (gameState !== "playing") return;
+
+            if (animationId !== null) {
+              clearTimeout(animationId);
+              animationId = null;
+            }
+
+            const canvas = document.getElementById("ladder-canvas");
+            const { padding, colWidth, topMargin, ladderHeight } =
+              ladderData.geometry;
+            const pathData = ladderData.paths[playerIndex];
+            const dpr = window.devicePixelRatio || 1;
+
+            drawLadder(true, playerIndex, -1);
+
+            let step = 0;
+            const path = pathData.path;
+
+            function drawSegment(from, to) {
+              const ctx = canvas.getContext("2d");
+              ctx.save();
+              ctx.scale(dpr, dpr);
+              ctx.strokeStyle = "#f59e0b";
+              ctx.lineWidth = 4;
+              ctx.lineCap = "round";
+
+              const numPlayers = ladderData.players.length;
+              const curveHeight = 15;
+
+              if (from.rolling || to.rolling) {
+                const y = topMargin + from.y * ladderHeight;
+                if (from.rolling === "left" || to.rolling === "left") {
+                  const firstX = padding;
+                  ctx.beginPath();
+                  if (from.col >= 0 && from.col < 1) {
+                    ctx.moveTo(firstX, y);
+                    ctx.quadraticCurveTo(
+                      firstX - 25,
+                      y - curveHeight,
+                      firstX - 30,
+                      y - curveHeight
+                    );
+                  } else {
+                    ctx.moveTo(firstX - 30, y - curveHeight);
+                    ctx.quadraticCurveTo(
+                      firstX - 25,
+                      y - curveHeight,
+                      firstX,
+                      y
+                    );
+                  }
+                  ctx.stroke();
+                }
+                if (from.rolling === "right" || to.rolling === "right") {
+                  const lastX = padding + (numPlayers - 1) * colWidth;
+                  ctx.beginPath();
+                  if (from.col >= numPlayers - 1) {
+                    ctx.moveTo(lastX, y);
+                    ctx.quadraticCurveTo(
+                      lastX + 25,
+                      y - curveHeight,
+                      lastX + 30,
+                      y - curveHeight
+                    );
+                  } else {
+                    ctx.moveTo(lastX + 30, y - curveHeight);
+                    ctx.quadraticCurveTo(lastX + 25, y - curveHeight, lastX, y);
+                  }
+                  ctx.stroke();
+                }
+              } else {
+                const fromX = padding + from.col * colWidth;
+                const fromY = topMargin + from.y * ladderHeight;
+                const toX = padding + to.col * colWidth;
+                const toY = topMargin + to.y * ladderHeight;
+
+                ctx.beginPath();
+                ctx.moveTo(fromX, fromY);
+                ctx.lineTo(toX, toY);
+                ctx.stroke();
+              }
+              ctx.restore();
+            }
+
+            function redrawFullPath() {
+              const ctx = canvas.getContext("2d");
+              ctx.save();
+              ctx.scale(dpr, dpr);
+              ctx.strokeStyle = "#f59e0b";
+              ctx.lineWidth = 4;
+              ctx.lineCap = "round";
+
+              const numPlayers = ladderData.players.length;
+              const curveHeight = 15;
+
+              for (let i = 0; i < path.length - 1; i++) {
+                const from = path[i];
+                const to = path[i + 1];
+
+                if (from.rolling || to.rolling) {
+                  const y = topMargin + from.y * ladderHeight;
+                  if (from.rolling === "left" || to.rolling === "left") {
+                    const firstX = padding;
+                    ctx.beginPath();
+                    if (from.col >= 0 && from.col < 1) {
+                      ctx.moveTo(firstX, y);
+                      ctx.quadraticCurveTo(
+                        firstX - 25,
+                        y - curveHeight,
+                        firstX - 30,
+                        y - curveHeight
+                      );
+                    } else {
+                      ctx.moveTo(firstX - 30, y - curveHeight);
+                      ctx.quadraticCurveTo(
+                        firstX - 25,
+                        y - curveHeight,
+                        firstX,
+                        y
+                      );
+                    }
+                    ctx.stroke();
+                  }
+                  if (from.rolling === "right" || to.rolling === "right") {
+                    const lastX = padding + (numPlayers - 1) * colWidth;
+                    ctx.beginPath();
+                    if (from.col >= numPlayers - 1) {
+                      ctx.moveTo(lastX, y);
+                      ctx.quadraticCurveTo(
+                        lastX + 25,
+                        y - curveHeight,
+                        lastX + 30,
+                        y - curveHeight
+                      );
+                    } else {
+                      ctx.moveTo(lastX + 30, y - curveHeight);
+                      ctx.quadraticCurveTo(
+                        lastX + 25,
+                        y - curveHeight,
+                        lastX,
+                        y
+                      );
+                    }
+                    ctx.stroke();
+                  }
+                } else {
+                  const fromX = padding + from.col * colWidth;
+                  const fromY = topMargin + from.y * ladderHeight;
+                  const toX = padding + to.col * colWidth;
+                  const toY = topMargin + to.y * ladderHeight;
+
+                  ctx.beginPath();
+                  ctx.moveTo(fromX, fromY);
+                  ctx.lineTo(toX, toY);
+                  ctx.stroke();
+                }
+              }
+              ctx.restore();
+            }
+
+            function animate() {
+              if (step >= path.length - 1) {
+                const endCol = pathData.endCol;
+                drawLadder(true, playerIndex, endCol);
+                redrawFullPath();
+                revealResult(playerIndex);
+                animationId = null;
+                return;
+              }
+
+              drawSegment(path[step], path[step + 1]);
+              step++;
+              animationId = setTimeout(animate, 80);
+            }
+
+            animate();
+          }
+
+          function initResultBox() {
+            const resultBox = document.getElementById("result-box");
+            const resultContent = document.getElementById("result-content");
+
+            resultContent.innerHTML = ladderData.players
+              .map(
+                (player, i) =>
+                  '<div class="result-item" data-player="' +
+                  i +
+                  '"><span class="player-name">' +
+                  player +
+                  '</span><span class="result-name" id="result-' +
+                  i +
+                  '">?</span></div>'
+              )
+              .join("");
+
+            resultBox.classList.add("active");
+          }
+
+          function revealResult(playerIndex) {
+            if (ladderData.revealed[playerIndex]) return;
+
+            const endCol = ladderData.paths[playerIndex].endCol;
+            const result = ladderData.results[endCol];
+
+            const resultEl = document.getElementById("result-" + playerIndex);
+            if (resultEl) {
+              resultEl.textContent = result;
+              resultEl.classList.add("revealed");
+            }
+
+            ladderData.revealed[playerIndex] = true;
+          }
+
+          window.resetLadder = function () {
+            document.getElementById("ladder-board").classList.remove("active");
+            document.getElementById("result-box").classList.remove("active");
+            ladderData = {
+              players: [],
+              results: [],
+              bridges: [],
+              paths: [],
+              revealed: [],
+            };
+            gameState = "idle";
+            updateMainButton();
+            setInputsDisabled(false);
+          };
+
+          window.addEventListener("resize", () => {
+            if (ladderData.players.length > 0 && gameState !== "idle") {
+              drawLadder(gameState === "playing");
+            }
+          });
+        })();
+      </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 tools.pllip.com</p>
+        <div class="lang-switcher">
+          <a href="/ladder/" class="lang-btn">한국어</a>
+          <a href="/en/ladder/" class="lang-btn active">English</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Nav scroll arrows
+        const menu = document.getElementById("nav-menu");
+        const prevBtn = document.querySelector(".nav-prev");
+        const nextBtn = document.querySelector(".nav-next");
+
+        function updateArrows() {
+          const needsScroll = menu.scrollWidth > menu.clientWidth;
+          const atStart = menu.scrollLeft <= 0;
+          const atEnd =
+            menu.scrollLeft >= menu.scrollWidth - menu.clientWidth - 1;
+
+          if (needsScroll) {
+            prevBtn.classList.add("visible");
+            nextBtn.classList.add("visible");
+            prevBtn.classList.toggle("hidden", atStart);
+            nextBtn.classList.toggle("hidden", atEnd);
+          } else {
+            prevBtn.classList.remove("visible");
+            nextBtn.classList.remove("visible");
+          }
+        }
+
+        prevBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: -150, behavior: "smooth" })
+        );
+        nextBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: 150, behavior: "smooth" })
+        );
+        menu.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+
+        // Scroll to active menu item on load
+        const activeItem = menu.querySelector("a.active");
+        if (activeItem) {
+          const li = activeItem.parentElement;
+          const menuRect = menu.getBoundingClientRect();
+          const liRect = li.getBoundingClientRect();
+          const scrollLeft =
+            li.offsetLeft - menuRect.width / 2 + liRect.width / 2;
+          menu.scrollLeft = Math.max(0, scrollLeft);
+        }
+        updateArrows();
+
+        // Header search dropdown
+        const searchBtn = document.getElementById("search-btn");
+        const dropdown = document.getElementById("search-dropdown");
+        const searchInput = document.getElementById("header-search");
+        const results = document.getElementById("search-results");
+        const items = results.querySelectorAll("li");
+
+        searchBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("open");
+          if (dropdown.classList.contains("open")) {
+            searchInput.focus();
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target) && e.target !== searchBtn) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        searchInput.addEventListener("input", () => {
+          const q = searchInput.value.toLowerCase().trim();
+          let visible = 0;
+          items.forEach((li) => {
+            const a = li.querySelector("a");
+            const text = a.textContent.toLowerCase();
+            const keywords = (a.dataset.keywords || "").toLowerCase();
+            const match = !q || text.includes(q) || keywords.includes(q);
+            li.classList.toggle("hidden", !match);
+            if (match) visible++;
+          });
+        });
+
+        // Keyboard shortcut: Cmd/Ctrl + K
+        document.addEventListener("keydown", (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+            e.preventDefault();
+            dropdown.classList.add("open");
+            searchInput.focus();
+          }
+          if (e.key === "Escape") {
+            dropdown.classList.remove("open");
+          }
+        });
+      })();
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"a47e96a534854c899db066813b9421c4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

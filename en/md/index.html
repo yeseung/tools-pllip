@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y4NESGBMLL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y4NESGBMLL");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Markdown Viewer - MyTools</title>
+    <meta
+      name="description"
+      content="Free Markdown viewer. Real-time preview with GitHub-style rendering."
+    />
+    <meta
+      name="keywords"
+      content="Markdown, MD viewer, Markdown preview, Markdown editor"
+    />
+
+    <!-- Open Graph / SNS 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Markdown Viewer" />
+    <meta
+      property="og:description"
+      content="Free Markdown viewer. Real-time preview with GitHub-style rendering."
+    />
+    <meta property="og:url" content="https://tools.pllip.com/en/md/" />
+    <meta property="og:site_name" content="MyTools" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Markdown Viewer" />
+    <meta
+      name="twitter:description"
+      content="Free Markdown viewer. Real-time preview with GitHub-style rendering."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tools.pllip.com/en/md/" />
+
+    <!-- Alternate language links -->
+
+    <link rel="alternate" hreflang="ko" href="https://tools.pllip.com/md/" />
+    <link rel="alternate" hreflang="en" href="https://tools.pllip.com/en/md/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://tools.pllip.com/md/"
+    />
+
+    <!-- 구조화된 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tools.pllip.com",
+        "alternateName": "Online Tools",
+        "url": "https://tools.pllip.com/en/",
+        "description": "Free online tools collection. IP address lookup, QR code generator, JSON/XML formatter, Markdown viewer, Base64 converter, and regex tester.",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tools.pllip.com/en/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Markdown Viewer",
+        "description": "Real-time markdown preview and editor",
+        "url": "https://tools.pllip.com/en/md/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "tools.pllip.com",
+          "url": "https://tools.pllip.com"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css?v=80f21ced" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/en/" class="logo"
+          ><span class="logo-full">tools.pllip.com</span
+          ><span class="logo-short">tools</span></a
+        >
+        <div class="nav-wrapper">
+          <button class="nav-arrow nav-prev" aria-label="Previous">
+            &#8249;
+          </button>
+          <ul id="nav-menu">
+            <li><a href="/en/ip/">IP Check</a></li>
+
+            <li><a href="/en/qr/">QR Code</a></li>
+
+            <li><a href="/en/json/">JSON</a></li>
+
+            <li><a href="/en/xml/">XML</a></li>
+
+            <li><a href="/en/md/" class="active">Markdown</a></li>
+
+            <li><a href="/en/base64/">Base64</a></li>
+
+            <li><a href="/en/regex/">Regex</a></li>
+
+            <li><a href="/en/uuid/">UUID</a></li>
+
+            <li><a href="/en/hash/">Hash</a></li>
+
+            <li><a href="/en/ladder/">Ladder</a></li>
+
+            <li><a href="/en/kelly/">Kelly</a></li>
+
+            <li><a href="/en/sudoku/">Sudoku</a></li>
+
+            <li><a href="/en/loan/">Loan</a></li>
+          </ul>
+          <button class="nav-arrow nav-next" aria-label="Next">&#8250;</button>
+        </div>
+        <div class="nav-search">
+          <button class="search-btn" id="search-btn" aria-label="Search">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Search tools..."
+              autocomplete="off"
+            />
+            <ul id="search-results">
+              <li>
+                <a
+                  href="/en/ip/"
+                  data-keywords="ip address ipv4 ipv6 myip whatismyip location lookup IP Address Lookup IP Check"
+                  >🌐 IP Address Lookup</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/qr/"
+                  data-keywords="qr code barcode wifi vcard generator create QR Code Generator QR Code"
+                  >📱 QR Code Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/json/"
+                  data-keywords="json formatter beautify minify validate parser JSON Formatter JSON"
+                  >{ } JSON Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/xml/"
+                  data-keywords="xml formatter beautify html xhtml convert json XML Formatter XML"
+                  >&lt;/&gt; XML Formatter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/md/"
+                  data-keywords="markdown md preview editor github readme Markdown Viewer Markdown"
+                  >M↓ Markdown Viewer</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/base64/"
+                  data-keywords="base64 encode decode encoder decoder converter Base64 Converter Base64"
+                  >B64 Base64 Converter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/regex/"
+                  data-keywords="regex regexp regular expression pattern tester Regex Tester Regex"
+                  >.* Regex Tester</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/uuid/"
+                  data-keywords="uuid guid unique id generator random UUID Generator UUID"
+                  ># UUID Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/hash/"
+                  data-keywords="hash md5 sha1 sha256 sha512 checksum generator Hash Generator Hash"
+                  >## Hash Generator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/ladder/"
+                  data-keywords="ladder game random picker lottery selection Ladder Game Ladder"
+                  >🪜 Ladder Game</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/kelly/"
+                  data-keywords="kelly criterion betting investment ratio bankroll odds Kelly Criterion Calculator Kelly"
+                  >📊 Kelly Criterion Calculator</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/sudoku/"
+                  data-keywords="sudoku puzzle number game brain logic solver hints Sudoku Sudoku"
+                  >9 Sudoku</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/en/loan/"
+                  data-keywords="loan calculator repayment mortgage amortization interest rate debt payoff strategy Loan Repayment Calculator Loan"
+                  >💰 Loan Repayment Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <style>
+        .md-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-top: 1rem;
+          height: calc(100vh - 350px);
+          min-height: 500px;
+        }
+        @media (max-width: 768px) {
+          .md-container {
+            grid-template-columns: 1fr;
+            height: auto;
+          }
+        }
+        .editor-box {
+          background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+        .editor-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          background: var(--bg);
+          border-bottom: 1px solid var(--border);
+        }
+        .editor-header h3 {
+          font-size: 0.875rem;
+          font-weight: 600;
+        }
+        .editor-actions {
+          display: flex;
+          gap: 0.5rem;
+        }
+        .editor-actions button {
+          padding: 0.35rem 0.75rem;
+          font-size: 0.75rem;
+          border: 1px solid var(--border);
+          background: var(--card-bg);
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        .editor-actions button:hover {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+        .editor-textarea {
+          width: 100%;
+          flex: 1;
+          padding: 1rem;
+          border: none;
+          resize: none;
+          font-family: "SF Mono", Monaco, monospace;
+          font-size: 0.875rem;
+          line-height: 1.6;
+          background: var(--card-bg);
+        }
+        .editor-textarea:focus {
+          outline: none;
+        }
+        .preview-box {
+          overflow: auto;
+          padding: 1rem 1.5rem;
+          flex: 1;
+        }
+        .toolbar {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          margin-bottom: 1rem;
+        }
+        .toolbar button {
+          padding: 0.5rem 1rem;
+          border: 1px solid var(--border);
+          background: var(--card-bg);
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.875rem;
+        }
+        .toolbar button:hover {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+        .preview-box h1 {
+          font-size: 2rem;
+          border-bottom: 1px solid var(--border);
+          padding-bottom: 0.5rem;
+          margin: 1.5rem 0 1rem;
+        }
+        .preview-box h2 {
+          font-size: 1.5rem;
+          border-bottom: 1px solid var(--border);
+          padding-bottom: 0.3rem;
+          margin: 1.5rem 0 1rem;
+        }
+        .preview-box h3 {
+          font-size: 1.25rem;
+          margin: 1.25rem 0 0.75rem;
+        }
+        .preview-box p {
+          margin: 0.75rem 0;
+        }
+        .preview-box a {
+          color: var(--primary);
+        }
+        .preview-box code {
+          background: #f0f0f0;
+          padding: 0.2rem 0.4rem;
+          border-radius: 4px;
+          font-family: monospace;
+          font-size: 0.875em;
+        }
+        .preview-box pre {
+          background: #f6f8fa;
+          padding: 1rem;
+          border-radius: 8px;
+          overflow-x: auto;
+          margin: 1rem 0;
+        }
+        .preview-box pre code {
+          background: none;
+          padding: 0;
+        }
+        .preview-box blockquote {
+          border-left: 4px solid var(--primary);
+          margin: 1rem 0;
+          padding: 0.5rem 1rem;
+          color: var(--text-muted);
+          background: var(--bg);
+        }
+        .preview-box ul,
+        .preview-box ol {
+          margin: 0.75rem 0;
+          padding-left: 2rem;
+        }
+        .preview-box table {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 1rem 0;
+        }
+        .preview-box th,
+        .preview-box td {
+          border: 1px solid var(--border);
+          padding: 0.5rem 1rem;
+          text-align: left;
+        }
+        .preview-box th {
+          background: var(--bg);
+          font-weight: 600;
+        }
+        .status-bar {
+          padding: 0.5rem 1rem;
+          background: var(--bg);
+          border-top: 1px solid var(--border);
+          font-size: 0.75rem;
+          display: flex;
+          justify-content: space-between;
+          color: var(--text-muted);
+        }
+      </style>
+
+      <div class="toolbar">
+        <button onclick="insertText('**', '**', 'Bold')">Bold</button>
+        <button onclick="insertText('*', '*', 'Italic')">Italic</button>
+        <button onclick="insertText('`', '`', 'Code')">Code</button>
+        <button onclick="insertText('[', '](url)', 'Link')">Link</button>
+        <button onclick="insertLine('# ')">H1</button>
+        <button onclick="insertLine('## ')">H2</button>
+        <button onclick="insertLine('- ')">List</button>
+        <button onclick="insertLine('> ')">Quote</button>
+        <button onclick="insertCodeBlock()">Code Block</button>
+        <button onclick="loadSample()">Sample</button>
+        <button onclick="copyMarkdown()">Copy</button>
+        <button onclick="downloadMarkdown()">Download</button>
+      </div>
+
+      <div class="md-container">
+        <div class="editor-box">
+          <div class="editor-header">
+            <h3>Markdown Input</h3>
+            <div class="editor-actions">
+              <button onclick="clearEditor()">Clear</button>
+            </div>
+          </div>
+          <textarea
+            id="input"
+            class="editor-textarea"
+            placeholder="# Title
+
+Enter markdown here..."
+            spellcheck="false"
+          ></textarea>
+          <div class="status-bar">
+            <span id="word-count">0 words</span>
+            <span id="char-count">0 chars</span>
+          </div>
+        </div>
+
+        <div class="editor-box">
+          <div class="editor-header">
+            <h3>Preview</h3>
+            <div class="editor-actions">
+              <button onclick="copyHTML()">Copy HTML</button>
+            </div>
+          </div>
+          <div id="preview" class="preview-box">
+            <p style="color: var(--text-muted)">Preview will appear here</p>
+          </div>
+        </div>
+      </div>
+
+      <script src="/js/marked.min.js?v=e04ae0bf"></script>
+      <script>
+        (function () {
+          const T = {
+            words: "words",
+            chars: "chars",
+            copied: "Copied!",
+            htmlCopied: "HTML copied!",
+            bold: "Bold",
+            code: "Code",
+          };
+          const LANG = "en";
+
+          const inputEl = document.getElementById("input");
+          const previewEl = document.getElementById("preview");
+
+          marked.setOptions({ breaks: true, gfm: true });
+
+          function render() {
+            previewEl.innerHTML = marked.parse(inputEl.value);
+            const text = inputEl.value;
+            document.getElementById("word-count").textContent =
+              (text.trim() ? text.trim().split(/\s+/).length : 0) +
+              " " +
+              T.words;
+            document.getElementById("char-count").textContent =
+              text.length + " " + T.chars;
+          }
+
+          inputEl.addEventListener("input", render);
+
+          window.insertText = function (before, after, placeholder) {
+            const start = inputEl.selectionStart,
+              end = inputEl.selectionEnd;
+            const selected = inputEl.value.substring(start, end) || placeholder;
+            inputEl.value =
+              inputEl.value.substring(0, start) +
+              before +
+              selected +
+              after +
+              inputEl.value.substring(end);
+            inputEl.focus();
+            inputEl.selectionStart = start + before.length;
+            inputEl.selectionEnd = start + before.length + selected.length;
+            render();
+          };
+
+          window.insertLine = function (prefix) {
+            const start = inputEl.selectionStart;
+            const lineStart = inputEl.value.lastIndexOf("\n", start - 1) + 1;
+            inputEl.value =
+              inputEl.value.substring(0, lineStart) +
+              prefix +
+              inputEl.value.substring(lineStart);
+            inputEl.focus();
+            inputEl.selectionStart = inputEl.selectionEnd =
+              lineStart + prefix.length;
+            render();
+          };
+
+          window.insertCodeBlock = function () {
+            window.insertText("```\n", "\n```", T.code);
+          };
+          window.copyMarkdown = function () {
+            navigator.clipboard.writeText(inputEl.value);
+            alert(T.copied);
+          };
+          window.copyHTML = function () {
+            navigator.clipboard.writeText(previewEl.innerHTML);
+            alert(T.htmlCopied);
+          };
+          window.clearEditor = function () {
+            inputEl.value = "";
+            render();
+          };
+
+          window.downloadMarkdown = function () {
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(
+              new Blob([inputEl.value], { type: "text/markdown" })
+            );
+            a.download = "document.md";
+            a.click();
+          };
+
+          window.loadSample = function () {
+            if (LANG === "en") {
+              inputEl.value = `# Markdown Sample
+
+## Text Styles
+**Bold**, *Italic*, \`inline code\`
+
+## Lists
+- Item 1
+- Item 2
+  - Sub item
+
+## Code Block
+\`\`\`javascript
+console.log('Hello!');
+\`\`\`
+
+## Table
+| Name | Age |
+|------|-----|
+| John | 30 |
+
+> Blockquote`;
+            } else {
+              inputEl.value = `# Markdown 샘플
+
+## 텍스트 스타일
+**굵게**, *기울임*, \`인라인 코드\`
+
+## 목록
+- 항목 1
+- 항목 2
+  - 하위 항목
+
+## 코드 블록
+\`\`\`javascript
+console.log('Hello!');
+\`\`\`
+
+## 표
+| 이름 | 나이 |
+|------|------|
+| 홍길동 | 30 |
+
+> 인용문`;
+            }
+            render();
+          };
+
+          render();
+        })();
+      </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 tools.pllip.com</p>
+        <div class="lang-switcher">
+          <a href="/md/" class="lang-btn">한국어</a>
+          <a href="/en/md/" class="lang-btn active">English</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Nav scroll arrows
+        const menu = document.getElementById("nav-menu");
+        const prevBtn = document.querySelector(".nav-prev");
+        const nextBtn = document.querySelector(".nav-next");
+
+        function updateArrows() {
+          const needsScroll = menu.scrollWidth > menu.clientWidth;
+          const atStart = menu.scrollLeft <= 0;
+          const atEnd =
+            menu.scrollLeft >= menu.scrollWidth - menu.clientWidth - 1;
+
+          if (needsScroll) {
+            prevBtn.classList.add("visible");
+            nextBtn.classList.add("visible");
+            prevBtn.classList.toggle("hidden", atStart);
+            nextBtn.classList.toggle("hidden", atEnd);
+          } else {
+            prevBtn.classList.remove("visible");
+            nextBtn.classList.remove("visible");
+          }
+        }
+
+        prevBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: -150, behavior: "smooth" })
+        );
+        nextBtn.addEventListener("click", () =>
+          menu.scrollBy({ left: 150, behavior: "smooth" })
+        );
+        menu.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+
+        // Scroll to active menu item on load
+        const activeItem = menu.querySelector("a.active");
+        if (activeItem) {
+          const li = activeItem.parentElement;
+          const menuRect = menu.getBoundingClientRect();
+          const liRect = li.getBoundingClientRect();
+          const scrollLeft =
+            li.offsetLeft - menuRect.width / 2 + liRect.width / 2;
+          menu.scrollLeft = Math.max(0, scrollLeft);
+        }
+        updateArrows();
+
+        // Header search dropdown
+        const searchBtn = document.getElementById("search-btn");
+        const dropdown = document.getElementById("search-dropdown");
+        const searchInput = document.getElementById("header-search");
+        const results = document.getElementById("search-results");
+        const items = results.querySelectorAll("li");
+
+        searchBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("open");
+          if (dropdown.classList.contains("open")) {
+            searchInput.focus();
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target) && e.target !== searchBtn) {
+            dropdown.classList.remove("open");
+          }
+        });
+
+        searchInput.addEventListener("input", () => {
+          const q = searchInput.value.toLowerCase().trim();
+          let visible = 0;
+          items.forEach((li) => {
+            const a = li.querySelector("a");
+            const text = a.textContent.toLowerCase();
+            const keywords = (a.dataset.keywords || "").toLowerCase();
+            const match = !q || text.includes(q) || keywords.includes(q);
+            li.classList.toggle("hidden", !match);
+            if (match) visible++;
+          });
+        });
+
+        // Keyboard shortcut: Cmd/Ctrl + K
+        document.addEventListener("keydown", (e) => {
+          if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+            e.preventDefault();
+            dropdown.classList.add("open");
+            searchInput.focus();
+          }
+          if (e.key === "Escape") {
+            dropdown.classList.remove("open");
+          }
+        });
+      })();
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"a47e96a534854c899db066813b9421c4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
